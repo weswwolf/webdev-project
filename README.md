@@ -14,7 +14,11 @@ how to run the code
 
 outside sources used (tutorials)
 ======================
+BOOTSTRAP
 https://www.w3schools.com/bootstrap/bootstrap_grid_basic.asp
+https://www.w3schools.com/bootstrap/bootstrap_images.asp
+https://www.w3schools.com/bootstrap/bootstrap_jumbotron_header.asp
+======================
 
 site deployed at
 ======================

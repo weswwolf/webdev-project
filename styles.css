@@ -1,5 +1,10 @@
 
+* {
+    font-family: monospace;
+}
+
 .container-fluid {
+    margin-top: -16px;
     background-color: black;
     color: white;
 }
@@ -18,4 +23,14 @@
 .btn-default:hover {
     /* move this to be a variable */
     color: rgb(199.0, 0.0, 57.0);
+}
+
+
+.rounded-image {
+    border-radius: 50%;
+}
+
+.jumbotron {
+    display: flex;
+    flex-direction: row;
 }
