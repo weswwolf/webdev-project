@@ -1,0 +1,41 @@
+
+
+
+
+.container-fluid {
+    background-color: black;
+    color: white;
+}
+
+.col-2 {
+    padding: 20px;
+}
+
+
+/*
+* {
+    font-family: monospace;
+}
+
+
+ul {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: white;
+    list-style-type: none;
+    margin: 0px; 
+    justify-self:flex-start;
+    border: 10px solid green;
+    width: 100%;
+}
+
+li {
+    font-size: 25px;
+    width: 20%;
+    justify-self: center;
+    align-items: center;
+    background-color: red;
+    border: 10px solid blue;
+}
+*/

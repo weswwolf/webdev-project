@@ -14,9 +14,11 @@ how to run the code
 
 outside sources used (tutorials)
 ======================
-
+https://www.w3schools.com/bootstrap/bootstrap_grid_basic.asp
 
 site deployed at
 ======================
+https://weswwolf.github.io/
+
 
 

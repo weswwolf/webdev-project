@@ -1,15 +1,18 @@
 5/17/2023
 Initial repo and files commited. used default html boilerplate.
-
-
-
-
-
-
+Site was sucessfully deployed and content is visible.
+Spent some time thinking about how the site should be laid out structurally
+what contents should be in each section.
+Also thought about what specific styles the website should use
+and have a simple minimal and clean theme with a little color to pop.
+Created simple pong logo, 100x50.
+Switched to using bootstrap for easier responsiveness.
 
 
 links 
 ==============
 github repo:
+https://github.com/weswwolf/weswwolf.github.io
 
 deployed site:
+https://weswwolf.github.io/
