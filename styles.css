@@ -13,6 +13,9 @@
 .nav-item {
     padding-top: 5px;
     padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-default {
@@ -33,4 +36,10 @@
 .jumbotron {
     display: flex;
     flex-direction: row;
+}
+
+.nav-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
