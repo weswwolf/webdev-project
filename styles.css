@@ -1,41 +1,21 @@
 
-
-
-
 .container-fluid {
     background-color: black;
     color: white;
 }
 
-.col-2 {
-    padding: 20px;
+
+.nav-item {
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
 
-
-/*
-* {
-    font-family: monospace;
-}
-
-
-ul {
-    display: flex;
-    flex-direction: row;
+.btn-default {
     background-color: black;
-    color: white;
-    list-style-type: none;
-    margin: 0px; 
-    justify-self:flex-start;
-    border: 10px solid green;
-    width: 100%;
+    color: White;
 }
 
-li {
-    font-size: 25px;
-    width: 20%;
-    justify-self: center;
-    align-items: center;
-    background-color: red;
-    border: 10px solid blue;
+.btn-default:hover {
+    /* move this to be a variable */
+    color: rgb(199.0, 0.0, 57.0);
 }
-*/
