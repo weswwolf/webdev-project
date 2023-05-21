@@ -8,6 +8,12 @@ and have a simple minimal and clean theme with a little color to pop.
 Created simple pong logo, 100x50.
 Switched to using bootstrap for easier responsiveness.
 
+5/20/2023
+Added experiences and projects section and filled with appropriate information
+Added images for 3d chess game
+Added images for computer hardware, pets
+
+
 
 links 
 ==============
