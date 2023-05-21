@@ -3,11 +3,20 @@
     font-family: monospace;
 }
 
+/*
 .container-fluid {
     margin-top: -16px;
     background-color: black;
     color: white;
+} */
+
+.navbar-style {
+    margin-top: 0px;
+    background-color: black;
+    color: white;
 }
+
+
 
 
 .nav-item {
