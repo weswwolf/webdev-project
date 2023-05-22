@@ -54,3 +54,36 @@
    font-size: 20px;
 }
 
+
+/*
+.embed-responsive-item {
+    width: 400px;
+    height: 75px;
+}*/
+
+
+#pong {
+    width: 800px;
+    height: 300px;
+    border: none;
+    transform: scale(0.4);
+}
+
+@media (min-width: 576px) {
+    #pong {
+        transform: scale(0.4);
+    }
+    
+}
+
+@media (min-width: 768px) {
+    #pong {
+        transform: scale(0.75);
+    }
+}
+
+@media (min-width: 992px) {
+    #pong {
+        transform: scale(1);
+    }
+}
