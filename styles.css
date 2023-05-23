@@ -63,27 +63,34 @@
 
 
 #pong {
-    width: 800px;
-    height: 300px;
+    width: 400px;
+    height: 150px;
     border: none;
-    transform: scale(0.4);
 }
 
 @media (min-width: 576px) {
     #pong {
-        transform: scale(0.4);
+        scale: 1.25;
+        margin: 30px;
     }
     
 }
 
 @media (min-width: 768px) {
     #pong {
-        transform: scale(0.75);
+        margin: 60px;
+        scale: 1.5;
     }
 }
 
 @media (min-width: 992px) {
     #pong {
-        transform: scale(1);
+        margin: 90px;
+        scale: 2.0;
     }
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
 }

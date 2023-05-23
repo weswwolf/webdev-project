@@ -1,10 +1,10 @@
-const window_height = 300;
-const window_width = 800;
-const paddle_height = 100;
-const paddle_width = 40;
-const paddle_speed = 5;
-const ball_diameter = 30;
-const ball_speed_initial = 4;
+const window_height = 150;
+const window_width = 400;
+const paddle_height = 50;
+const paddle_width = 20;
+const paddle_speed = 2.5;
+const ball_diameter = 15;
+const ball_speed_initial = 2;
 const ai_error_initial = 64;
 const ai_error_tweak = 3.65;
 
