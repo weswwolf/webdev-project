@@ -5,7 +5,7 @@ const paddle_width = 20;
 const paddle_speed = 2.5;
 const ball_diameter = 15;
 const ball_speed_initial = 2;
-const ai_error_initial = 64;
+const ai_error_initial = 32;
 const ai_error_tweak = 3.65;
 
 let ball_speed = ball_speed_initial;

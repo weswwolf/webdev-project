@@ -13,7 +13,11 @@ Added experiences and projects section and filled with appropriate information
 Added images for 3d chess game
 Added images for computer hardware, pets
 
-
+5/22/2023
+Created simple pong game using p5 library in online editor.
+moved the pong game from the online editor into the project files
+embedded the pong game and styled it for smooth resizing.
+made the pong game smaller to start with, and scale up on larger windows.
 
 links 
 ==============
