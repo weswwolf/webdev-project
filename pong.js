@@ -6,7 +6,7 @@ const paddle_speed = 2.5;
 const ball_diameter = 15;
 const ball_speed_initial = 2;
 const ai_error_initial = 32;
-const ai_error_tweak = 3.65;
+const ai_error_tweak = 1.88;
 
 let ball_speed = ball_speed_initial;
 let ball_x = window_width/2;
@@ -25,6 +25,10 @@ let right_paddle_y = window_height/2;
 // max difficulty = ai_errror_initial / ai_error_tweak
 let difficulty = 1;
 
+let player_score = 0;
+let ai_score = 0;
+let start_text = "Click on the game area to start";
+let game_started = false;
 
 function setup() {
   createCanvas(window_width, window_height);
@@ -37,16 +41,18 @@ function setup() {
   //let user_options = text(radio.value(), 40, 40);
 }
 
-function start_game() {
+function start_game() { 
   resetBallPos();
   ai_find_ball_y = ai_calculate_ball_y();
   ball_move = true;
   ball_speed = ball_speed_initial;
+  start_text="";
   
 }
 // on mouse press, start the game of pong!
 function mousePressed() {
-   start_game();
+   if (!ball_move)
+     start_game();
 }
 
 
@@ -56,6 +62,20 @@ function resetBallPos() {
   ball_x = window_width/2;
   ball_y = window_height/2;
   ball_move = false;
+}
+
+function check_win() {
+  if (player_score == 3) {
+   start_text = "Congratulations, you win!"
+    player_score = ai_score = 0;
+    game_started = false;
+  }
+  if (ai_score == 3) {
+    start_text = "Sorry, but the AI overloads crushed you."
+    player_score = ai_score = 0;
+    game_started = false;
+  }
+  
 }
 
 function moveBall() {
@@ -72,8 +92,15 @@ function moveBall() {
   }
   // ball left the window on left or right side
   if (ball_x > window_width || ball_x < 0){
+    
     // add to score
-    resetBallPos(); 
+    if (ball_x > window_width) {
+      // human score
+      player_score +=1;
+    } else { ai_score += 1;}
+    check_win();
+    resetBallPos();
+    
   } 
 }
 
@@ -186,11 +213,15 @@ function draw() {
   let left_paddle = rect(left_paddle_x, left_paddle_y, paddle_width, paddle_height);
   let right_paddle = rect(right_paddle_x, right_paddle_y, paddle_width, paddle_height);
   let ball = circle(ball_x, ball_y, ball_diameter);
+  textAlign(CENTER, CENTER);
+  fill(255);
+  text(start_text, window_width/2, window_height/5);
+  text(player_score, window_width/10, window_height/5);
+  text(ai_score, 9*window_width/10, window_height/5);
   //let user_options = text(radio.value(), 40, 40);
 }
 
-
-
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }

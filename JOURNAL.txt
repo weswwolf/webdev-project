@@ -19,6 +19,10 @@ moved the pong game from the online editor into the project files
 embedded the pong game and styled it for smooth resizing.
 made the pong game smaller to start with, and scale up on larger windows.
 
+
+
+https://p5js.org/reference/#/p5/text
+
 links 
 ==============
 github repo:
