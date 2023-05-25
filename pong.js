@@ -32,6 +32,8 @@ let game_started = false;
 let gui;
 let touch_slider;
 
+let draw_background = true;
+
 function setup() {
   createCanvas(window_width, window_height);
   createGui(gui);
@@ -222,7 +224,9 @@ function check_collision() {
 }
 
 function draw() {
-  background(0); 
+  if (draw_background) {
+    background(0); 
+  }
   color(255);
   rectMode(CENTER);
   moveBall();
@@ -262,3 +266,7 @@ var sliderElement = touch_slider;
 sliderElement.addEventListener("touchstart", function(event) {
   event.preventDefault();
 });*/
+
+function setBackgroundDrawing(checked) {
+  draw_background = checked;
+}

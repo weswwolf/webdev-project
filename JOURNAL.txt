@@ -25,6 +25,9 @@ It would scroll you down the screen, but I want to use spacebar to start the pon
 I wanted to make the pong game accessible to mobile phones after my disappointment in using 
 it on my own mobile device.
 Used another p5 library extension to add GUI slider to the pong game.
+Early in making the pong game, i noticed I could decide not to draw the background
+which results in really interesting look. So, I added this as a user option checkbox.
+I want to add more user options!
 
 
 https://p5js.org/reference/#/p5/text
