@@ -29,6 +29,8 @@ let player_score = 0;
 let ai_score = 0;
 let start_text = "Click on the game area to start";
 let game_started = false;
+let gui;
+let touch_slider;
 
 function setup() {
   createCanvas(window_width, window_height);
@@ -39,6 +41,10 @@ function setup() {
   radio.style('width', '60px');
   radio.style('color', 'white');*/
   //let user_options = text(radio.value(), 40, 40);
+  gui = createGui();
+  angleMode(DEGREES);
+  rotate(90);
+  touch_slider = createSliderV("SliderV", 10, 10, 20, 125, 150, 0);
 }
 
 function start_game() { 
@@ -53,6 +59,9 @@ function start_game() {
 function mousePressed() {
    if (!ball_move)
      start_game();
+}
+function touchStarted() {
+  mousePressed();
 }
 
 
@@ -71,7 +80,7 @@ function check_win() {
     game_started = false;
   }
   if (ai_score == 3) {
-    start_text = "Sorry, but the AI overloads crushed you."
+    start_text = "Sorry, but the AI overlords crushed you."
     player_score = ai_score = 0;
     game_started = false;
   }
@@ -106,6 +115,7 @@ function moveBall() {
 
 
 function move_player() {
+  /*
   // on keypress W move left paddle UP
   if (keyIsDown(87) && left_paddle_y > paddle_height/2) {
     left_paddle_y -= paddle_speed;
@@ -113,10 +123,22 @@ function move_player() {
   // on keypress S move left paddle DOWN
   if (keyIsDown(83) && left_paddle_y < window_height - paddle_height/2) {
     left_paddle_y += paddle_speed;
+  }*/
+
+  // check for slider value to move paddle
+  if (left_paddle_y > touch_slider.val && left_paddle_y > paddle_height/2) {
+    left_paddle_y -= paddle_speed;
   }
+  // on keypress S move left paddle DOWN
+  if (left_paddle_y < touch_slider.val && left_paddle_y < window_height - paddle_height/2) {
+    left_paddle_y += paddle_speed;
+  }
+
   if (keyIsDown(32)) {
-      start_game();
+    mousePressed();
   }
+  print("paddle y" + left_paddle_y);
+  print("slider value: " + touch_slider.val);
 }
 
 function move_ai_paddle (to_this_y) {
@@ -219,9 +241,20 @@ function draw() {
   text(player_score, window_width/10, window_height/5);
   text(ai_score, 9*window_width/10, window_height/5);
   //let user_options = text(radio.value(), 40, 40);
+  drawGui();
+  if (touch_slider.isChanged) {
+    print("slider value: " + touch_slider.val);
+  }
 }
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
+
+// stop from scolling down on spacebar press
+window.addEventListener("keydown", function(event) {
+  if (event.key === " ") {
+    event.preventDefault();
+  }
+});

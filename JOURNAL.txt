@@ -19,6 +19,12 @@ moved the pong game from the online editor into the project files
 embedded the pong game and styled it for smooth resizing.
 made the pong game smaller to start with, and scale up on larger windows.
 
+5/25/2023
+Added window event listener to pong.js to stop the default behavior on space bar press
+It would scroll you down the screen, but I want to use spacebar to start the pong game.
+I wanted to make the pong game accessible to mobile phones after my disappointment in using 
+it on my own mobile device.
+Used another p5 library extension to add GUI slider to the pong game.
 
 
 https://p5js.org/reference/#/p5/text
