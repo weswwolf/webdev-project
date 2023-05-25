@@ -34,17 +34,16 @@ let touch_slider;
 
 function setup() {
   createCanvas(window_width, window_height);
-  /*radio = createRadio();
-  radio.option('easy');
-  radio.option('medium');
-  radio.option('difficult');
-  radio.style('width', '60px');
-  radio.style('color', 'white');*/
-  //let user_options = text(radio.value(), 40, 40);
-  gui = createGui();
-  angleMode(DEGREES);
-  rotate(90);
+  createGui(gui);
+
   touch_slider = createSliderV("SliderV", 10, 10, 20, 125, 150, 0);
+
+  // get a reference to the canvas
+  let canvasElement = document.querySelector("#defaultCanvas0");
+  // add an event listener preventing the scrolling 
+  canvasElement.addEventListener("touchstart", function(event) {
+    event.preventDefault();
+  });
 }
 
 function start_game() { 
@@ -133,12 +132,10 @@ function move_player() {
   if (left_paddle_y < touch_slider.val && left_paddle_y < window_height - paddle_height/2) {
     left_paddle_y += paddle_speed;
   }
-
+  // space bar to play game for convenience
   if (keyIsDown(32)) {
     mousePressed();
   }
-  print("paddle y" + left_paddle_y);
-  print("slider value: " + touch_slider.val);
 }
 
 function move_ai_paddle (to_this_y) {
@@ -258,3 +255,10 @@ window.addEventListener("keydown", function(event) {
     event.preventDefault();
   }
 });
+
+/*
+ // Disable default touch behavior for the slider element
+var sliderElement = touch_slider;
+sliderElement.addEventListener("touchstart", function(event) {
+  event.preventDefault();
+});*/
