@@ -4,7 +4,7 @@ function start_game() {
   left_ai_find_ball_y = left_ai_calculate_ball_y();
   right_ai_find_ball_y = right_ai_calculate_ball_y();
   ball_move = true;
-  ball_speed = ball_speed_initial;
+  ball_speed = BALL_SPEED_INITIAL;
   start_text="";
   
 }
@@ -21,8 +21,8 @@ function touchStarted() {
 // puts the ball back to the center of the screen
 // and stops the ball 
 function resetBallPos() {
-  ball_x = window_width/2;
-  ball_y = window_height/2;
+  ball_x = WINDOW_WIDTH/2;
+  ball_y = WINDOW_HEIGHT/2;
   ball_move = false;
 }
 
@@ -50,12 +50,12 @@ function left_ai_calculate_ball_y() {
   let current_ball_dir = ball_y_dir;
   
   // subtract the amount from x and y until we reach the top
-  while (predict_x > left_paddle_x) {
-    while (current_ball_dir == 'up' && predict_y >= 0 && predict_x > left_paddle_x) {
+  while (predict_x > left_paddle.x) {
+    while (current_ball_dir == 'up' && predict_y >= 0 && predict_x > left_paddle.x) {
       predict_x -= 1;
       predict_y -= 1;
     }
-    while (current_ball_dir == 'down' && predict_y <= window_height && predict_x > left_paddle_x) {
+    while (current_ball_dir == 'down' && predict_y <= WINDOW_HEIGHT && predict_x > left_paddle.x) {
       predict_x -= 1;
       predict_y += 1;
     }
@@ -64,16 +64,16 @@ function left_ai_calculate_ball_y() {
       predict_y = 1;
       predict_x -= 1;
     }
-    if (predict_y >= window_height) {
+    if (predict_y >= WINDOW_HEIGHT) {
       current_ball_dir ='up';
-      predict_y = window_height-1;
+      predict_y = WINDOW_HEIGHT-1;
       predict_x -=1;
     }
   }
   
   // before returning the actual value, it would be fun
   // to alter this just a bit depending on the difficulty.
-  let offset = getRandomInt(ai_error_initial-difficulty * ai_error_tweak + ball_speed * ai_error_tweak);
+  let offset = getRandomInt(AI_ERROR_INITIAL-difficulty * AI_ERROR_TWEAK + ball_speed * AI_ERROR_TWEAK);
   //print (offset);
   // decide whether to subtract or add the offset
   if (!perfect_ai) {
@@ -95,12 +95,12 @@ function right_ai_calculate_ball_y() {
   let current_ball_dir = ball_y_dir;
   
   // subtract the amount from x and y until we reach the top
-  while (predict_x < right_paddle_x) {
-    while (current_ball_dir == 'up' && predict_y >= 0 && predict_x < right_paddle_x) {
+  while (predict_x < right_paddle.x) {
+    while (current_ball_dir == 'up' && predict_y >= 0 && predict_x < right_paddle.x) {
       predict_x += 1;
       predict_y -= 1;
     }
-    while (current_ball_dir == 'down' && predict_y <= window_height && predict_x < right_paddle_x) {
+    while (current_ball_dir == 'down' && predict_y <= WINDOW_HEIGHT && predict_x < right_paddle.x) {
       predict_x += 1;
       predict_y += 1;
     }
@@ -109,16 +109,16 @@ function right_ai_calculate_ball_y() {
       predict_y = 1;
       predict_x += 1;
     }
-    if (predict_y >= window_height) {
+    if (predict_y >= WINDOW_HEIGHT) {
       current_ball_dir ='up';
-      predict_y = window_height-1;
+      predict_y = WINDOW_HEIGHT-1;
       predict_x +=1;
     }
   }
   
   // before returning the actual value, it would be fun
   // to alter this just a bit depending on the difficulty.
-  let offset = getRandomInt(ai_error_initial-difficulty * ai_error_tweak + ball_speed * ai_error_tweak);
+  let offset = getRandomInt(AI_ERROR_INITIAL-difficulty * AI_ERROR_TWEAK + ball_speed * AI_ERROR_TWEAK);
   //print (offset);
   // decide whether to subtract or add the offset
   if (!perfect_ai) {
@@ -133,30 +133,30 @@ function right_ai_calculate_ball_y() {
 function check_collision() {
 
   // collision with right paddle
-  if (ball_y > right_paddle_y - paddle_height/2 &&
-      ball_y < right_paddle_y + paddle_height/2 && 
-      ball_x > right_paddle_x - paddle_width/2 &&
-      ball_x < right_paddle_x + paddle_width/2)
+  if (ball_y > right_paddle.y - PADDLE_HEIGHT/2 &&
+      ball_y < right_paddle.y + PADDLE_HEIGHT/2 && 
+      ball_x > right_paddle.x - PADDLE_WIDTH/2 &&
+      ball_x < right_paddle.x + PADDLE_WIDTH/2)
     {
         left_ai_find_ball_y = left_ai_calculate_ball_y();
         ball_x_dir = 'left';
-        if (ball_speed < MAX_BALL_SPEED){
+        if (ball_speed < BALL_SPEED_MAX){
           ball_speed += 0.25;
         }
     }
   
    // collision with left paddle
-  if (ball_y > left_paddle.y - paddle_height/2 &&
-      ball_y < left_paddle.y + paddle_height/2 && 
-      ball_x > left_paddle.x - paddle_width/2 &&
-      ball_x < left_paddle.x + paddle_width/2)
+  if (ball_y > left_paddle.y - PADDLE_HEIGHT/2 &&
+      ball_y < left_paddle.y + PADDLE_HEIGHT/2 && 
+      ball_x > left_paddle.x - PADDLE_WIDTH/2 &&
+      ball_x < left_paddle.x + PADDLE_WIDTH/2)
     {
         // we only want to calculate the ai move once
         if (ball_x_dir != 'right') {
           // collide
           right_ai_find_ball_y = right_ai_calculate_ball_y();
           ball_x_dir = 'right';
-          if (ball_speed < MAX_BALL_SPEED){
+          if (ball_speed < BALL_SPEED_MAX){
             ball_speed += 0.25;
           }
         }
