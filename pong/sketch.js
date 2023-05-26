@@ -38,6 +38,8 @@ let start_text = "Click on the game area to start";
 let game_started = false;
 // OPTIONS
 let draw_background = true;
+let perfect_ai = false;
+let ui_slider = true;
 
 // called once when the sketch starts
 function setup() {
@@ -74,7 +76,9 @@ function draw() {
   text(player_score, window_width/10, window_height/5);
   text(ai_score, 9*window_width/10, window_height/5);
   //let user_options = text(radio.value(), 40, 40);
-  drawGui();
+  if (ui_slider) {
+    drawGui();
+  }
   if (touch_slider.isChanged) {
     print("slider value: " + touch_slider.val);
   }

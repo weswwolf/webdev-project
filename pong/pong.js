@@ -70,9 +70,13 @@ function ai_calculate_ball_y() {
   // before returning the actual value, it would be fun
   // to alter this just a bit depending on the difficulty.
   let offset = getRandomInt(ai_error_initial-difficulty * ai_error_tweak + ball_speed * ai_error_tweak);
-  print (offset);
+  //print (offset);
   // decide whether to subtract or add the offset
-  getRandomInt(2) == 1 ? predict_y += offset: predict_y -= offset;
+  if (!perfect_ai) {
+    // randomly add or take away some y value
+    getRandomInt(2) == 1 ? predict_y += offset: predict_y -= offset;
+  }
+
   return predict_y;
 }
 
@@ -96,6 +100,7 @@ function check_collision() {
       ball_x < left_paddle_x + paddle_width/2)
     {
         // we only want to calculate the ai move once
+
         ai_find_ball_y = ai_calculate_ball_y();
         ball_x_dir = 'right';
         ball_speed += 0.25;
@@ -124,4 +129,12 @@ sliderElement.addEventListener("touchstart", function(event) {
 
 function setBackgroundDrawing(checked) {
   draw_background = checked;
+}
+
+function setPerfectAI(checked) {
+  perfect_ai = checked;
+}
+
+function setUISlider(checked) {
+  ui_slider = checked;
 }

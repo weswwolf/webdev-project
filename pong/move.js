@@ -25,28 +25,32 @@ function moveBall() {
 }
 
 function move_player() {
-  /*
-  // on keypress W move left paddle UP
-  if (keyIsDown(87) && left_paddle_y > paddle_height/2) {
-    left_paddle_y -= paddle_speed;
-  }
-  // on keypress S move left paddle DOWN
-  if (keyIsDown(83) && left_paddle_y < window_height - paddle_height/2) {
-    left_paddle_y += paddle_speed;
-  }*/
+    if (ui_slider) {
+        // check for slider value to move paddle
+        if (left_paddle_y > touch_slider.val && left_paddle_y > paddle_height/2) {
+            left_paddle_y -= paddle_speed;
+        }
+        // check for slider value to move paddle
+        if (left_paddle_y < touch_slider.val && left_paddle_y < window_height - paddle_height/2) {
+            left_paddle_y += paddle_speed;
+        }
+    }
+    else {
+        // on keypress W move left paddle UP
+        if (keyIsDown(87) && left_paddle_y > paddle_height/2) {
+            left_paddle_y -= paddle_speed;
+        }
+        // on keypress S move left paddle DOWN
+        if (keyIsDown(83) && left_paddle_y < window_height - paddle_height/2) {
+            left_paddle_y += paddle_speed;
+        }
 
-  // check for slider value to move paddle
-  if (left_paddle_y > touch_slider.val && left_paddle_y > paddle_height/2) {
-    left_paddle_y -= paddle_speed;
-  }
-  // on keypress S move left paddle DOWN
-  if (left_paddle_y < touch_slider.val && left_paddle_y < window_height - paddle_height/2) {
-    left_paddle_y += paddle_speed;
-  }
-  // space bar to play game for convenience
-  if (keyIsDown(32)) {
-    mousePressed();
-  }
+    }
+    // space bar to play game for convenience
+    if (keyIsDown(32)) {
+        mousePressed();
+    }
+
 }
 
 function move_ai_paddle (to_this_y) {

@@ -4,3 +4,15 @@ function toggleBackgroundDrawing() {
     var iframe = document.getElementById("pong");
     iframe.contentWindow.setBackgroundDrawing(checkbox.checked);
 }
+
+function togglePerfectAI() {
+    var checkbox = document.getElementById("perfect-ai-checkbox");
+    var iframe = document.getElementById("pong");
+    iframe.contentWindow.setPerfectAI(checkbox.checked);
+}
+
+function toggleUISlider() {
+    var checkbox = document.getElementById("UI-slider-checkbox");
+    var iframe = document.getElementById("pong");
+    iframe.contentWindow.setUISlider(checkbox.checked);
+}

@@ -176,17 +176,22 @@
         <h1 class="navbar-style">Projects</h1>
         <h2>In the beginning... </h2>
         <p>The first graphical game I made was pong, and the inspiration behind the page logo. Unfortunately, this was before I knew how to use github to host my projects, and I seem to have lost the files. This was still a great learning experience. I ended up remaking the game here in a few hours using p5 library.  </p>
-        <p>The computer is not unbeatable! I originally started with a perfect AI, but that's boring, so now it makes a mistake every once in a while. If you play long enough, you might notice some details like the ball is slowly speeding up. Or, how the AI gracefully returns to the center after each hit, and waits for you to strike back before moving!</p>
+        <p>I originally started with a perfect AI, but that's boring, so now it makes a mistake every once in a while. If you play long enough, you might notice some details like the ball is slowly speeding up. Or, how the AI gracefully returns to the center after each hit, and waits for you to strike back before moving!</p>
+        <p>Instructions: click on the game window, and use <b>W</b> and <b>S</b> keys to move up and down, and <b>spacebar</b> to start the ball. If you are on a mobile device, you can toggle the UI slider on for touch control. Check out the options panel below the game!</p>
 
-        <p>just click on the game area and use W and S to start.</p>
         <div class="container flex">
             <title>Pong game</title>
             <iframe src="pong/pong.html" id="pong" scrolling="no" defer></iframe>
         </div>
 
-        <div class="container flex">
-            <label for="draw-bg-checkbox">Draw Background?</label>
+        <div class="container">
+            <legend>Options Panel</legend> 
+            <label for="draw-bg-checkbox">Draw Background</label>
             <input type="checkbox" id="draw-bg-checkbox" onchange="toggleBackgroundDrawing()" checked>
+            <label for="perfect-ai-checkbox">Perfect AI</label>
+            <input type="checkbox" id="perfect-ai-checkbox" onchange="togglePerfectAI()">
+            <label for="UI-slider-checkbox">UI Slider</label>
+            <input type="checkbox" id="UI-slider-checkbox" onchange="toggleUISlider()">
         </div>
           
         <h2>The Travelling Salesman</h2>
