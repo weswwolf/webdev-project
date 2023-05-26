@@ -25,13 +25,15 @@ function moveBall() {
 }
 
 function move_player() {
+
+    if (ai_warfare) {
     if (ball_x_dir == 'right') {
         move_left_ai_paddle(window_height/2);
         return;
     }
     move_left_ai_paddle(left_ai_find_ball_y);
     return;
-    /*
+    }
     if (ui_slider) {
         // check for slider value to move paddle
         if (left_paddle_y > touch_slider.val && left_paddle_y > paddle_height/2) {
@@ -52,7 +54,7 @@ function move_player() {
             left_paddle_y += paddle_speed;
         }
 
-    }*/
+    }
     // space bar to play game for convenience
     if (keyIsDown(32)) {
         mousePressed();

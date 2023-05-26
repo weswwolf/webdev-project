@@ -16,3 +16,9 @@ function toggleUISlider() {
     var iframe = document.getElementById("pong");
     iframe.contentWindow.setUISlider(checkbox.checked);
 }
+
+function toggleAIWarfare() {
+    var checkbox = document.getElementById("AI-warfare-checkbox");
+    var iframe = document.getElementById("pong");
+    iframe.contentWindow.setAIWarfare(checkbox.checked);
+}

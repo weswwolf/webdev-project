@@ -168,13 +168,6 @@ window.addEventListener("keydown", function(event) {
   }
 });
 
-/*
- // Disable default touch behavior for the slider element
-var sliderElement = touch_slider;
-sliderElement.addEventListener("touchstart", function(event) {
-  event.preventDefault();
-});*/
-
 function setBackgroundDrawing(checked) {
   draw_background = checked;
 }
@@ -185,4 +178,9 @@ function setPerfectAI(checked) {
 
 function setUISlider(checked) {
   ui_slider = checked;
+}
+
+
+function setAIWarfare(checked) {
+  ai_warfare = checked;
 }

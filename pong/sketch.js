@@ -42,6 +42,7 @@ let game_started = false;
 let draw_background = true;
 let perfect_ai = false;
 let ui_slider = false;
+let ai_warfare = false;
 
 // called once when the sketch starts
 function setup() {
