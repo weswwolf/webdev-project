@@ -66,10 +66,10 @@ function move_left_ai_paddle (to_this_y) {
   // padding used to prevent the paddle from moving back and forth
   // once it has reached the area it is supposed to be in.
   let padding = 1;
-  if (left_paddle_y < to_this_y - padding && left_paddle_y < window_height - paddle_height/2) {
+  if (left_paddle_y < to_this_y - padding && left_paddle_y < window_height - paddle_height) {
     left_paddle_y += paddle_speed;
   }
-  else if (left_paddle_y > to_this_y + padding && left_paddle_y > paddle_height/2) {
+  else if (left_paddle_y > to_this_y + padding && left_paddle_y > paddle_height) {
     left_paddle_y -= paddle_speed;
   }
 }
@@ -78,10 +78,10 @@ function move_right_ai_paddle (to_this_y) {
   // padding used to prevent the paddle from moving back and forth
   // once it has reached the area it is supposed to be in.
   let padding = 1;
-  if (right_paddle_y < to_this_y - padding && right_paddle_y < window_height - paddle_height/2) {
+  if (right_paddle_y < to_this_y - padding && right_paddle_y < window_height - paddle_height) {
     right_paddle_y += paddle_speed;
   }
-  else if (right_paddle_y > to_this_y + padding && right_paddle_y > paddle_height/2) {
+  else if (right_paddle_y > to_this_y + padding && right_paddle_y > paddle_height) {
     right_paddle_y -= paddle_speed;
   }
 }
