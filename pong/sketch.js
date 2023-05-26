@@ -13,13 +13,22 @@ const BALL_SPEED_MAX = 8;
 const AI_ERROR_INITIAL = 32;
 const AI_ERROR_TWEAK = 1.88;
 
+
+let ball = {
+    x: WINDOW_WIDTH/2,
+    y: WINDOW_HEIGHT/2,
+    x_dir: 'right',
+    y_dir: 'up',
+    moving: false,
+    speed: BALL_SPEED_INITIAL,
+}
 // BALL VAR
-let ball_speed = BALL_SPEED_INITIAL;
-let ball_x = WINDOW_WIDTH/2;
-let ball_y = WINDOW_HEIGHT/2;
-let ball_x_dir = 'right';
-let ball_y_dir = 'up'
-let ball_move = false;
+//let ball_speed = BALL_SPEED_INITIAL;
+//let ball_x = WINDOW_WIDTH/2;
+//let ball_y = WINDOW_HEIGHT/2;
+//let ball_x_dir = 'right';
+//let ball_y_dir = 'up'
+//let ball_move = false;
 // AI VAR
 // max difficulty = ai_errror_initial / ai_error_tweak
 let difficulty = 1;
@@ -80,7 +89,7 @@ function draw() {
   move_right_ai();
   let draw_left_paddle = rect(left_paddle.x, left_paddle.y, PADDLE_WIDTH, PADDLE_HEIGHT);
   let draw_right_paddle = rect(right_paddle.x, right_paddle.y, PADDLE_WIDTH, PADDLE_HEIGHT);
-  let draw_ball = circle(ball_x, ball_y, BALL_DIAMETER);
+  let draw_ball = circle(ball.x, ball.y, BALL_DIAMETER);
   textAlign(CENTER, CENTER);
   fill(255);
   text(start_text, WINDOW_WIDTH/2, WINDOW_HEIGHT/5);

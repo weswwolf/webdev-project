@@ -1,20 +1,20 @@
 function moveBall() {
-  if (!ball_move) return;
+  if (!ball.move) return;
   // move in the appropriate direction
-  ball_x_dir == 'right'? ball_x += ball_speed : ball_x -= ball_speed;
-  ball_y_dir == 'up'? ball_y -= ball_speed : ball_y += ball_speed;
+  ball.x_dir == 'right'? ball.x += ball.speed : ball.x -= ball.speed;
+  ball.y_dir == 'up'? ball.y -= ball.speed : ball.y += ball.speed;
   // bounce the ball off the top and bottom of the canvas
-  if (ball_y > WINDOW_HEIGHT - BALL_DIAMETER/2) {
-    ball_y_dir = 'up';
+  if (ball.y > WINDOW_HEIGHT - BALL_DIAMETER/2) {
+    ball.y_dir = 'up';
   }
-  if (ball_y < 0) {
-    ball_y_dir = 'down';
+  if (ball.y < 0) {
+    ball.y_dir = 'down';
   }
   // ball left the window on left or right side
-  if (ball_x > WINDOW_WIDTH || ball_x < 0){
+  if (ball.x > WINDOW_WIDTH || ball.x < 0){
     
     // add to score
-    if (ball_x > WINDOW_WIDTH) {
+    if (ball.x > WINDOW_WIDTH) {
       // human score
       player_score +=1;
     } else { ai_score += 1;}
@@ -27,7 +27,7 @@ function moveBall() {
 function move_player() {
 
     if (ai_warfare) {
-    if (ball_x_dir == 'right') {
+    if (ball.x_dir == 'right') {
         move_left_ai_paddle(WINDOW_HEIGHT/2);
         return;
     }
@@ -36,22 +36,22 @@ function move_player() {
     }
     if (ui_slider) {
         // check for slider value to move paddle
-        if (left_paddle.y > touch_slider.val && left_paddle.y > PADDLE_HEIGHT/2) {
-            left_paddle.y -= PADDLE_SPEED;
+        if (left_paddle.y > touch_slider.val && left_paddle.y > paddle_height/2) {
+            left_paddle.y -= paddle_speed;
         }
         // check for slider value to move paddle
-        if (left_paddle.y < touch_slider.val && left_paddle.y < WINDOW_HEIGHT - PADDLE_HEIGHT/2) {
-            left_paddle.y += PADDLE_SPEED;
+        if (left_paddle.y < touch_slider.val && left_paddle.y < window_height - paddle_height/2) {
+            left_paddle.y += paddle_speed;
         }
     }
     else {
         // on keypress W move left paddle UP
-        if (keyIsDown(87) && left_paddle_y > PADDLE_HEIGHT/2) {
-            left_paddle_y -= PADDLE_SPEED;
+        if (keyIsDown(87) && left_paddle_y > paddle_height/2) {
+            left_paddle_y -= paddle_speed;
         }
         // on keypress S move left paddle DOWN
-        if (keyIsDown(83) && left_paddle_y < WINDOW_HEIGHT - PADDLE_HEIGHT/2) {
-            left_paddle_y += PADDLE_SPEED;
+        if (keyIsDown(83) && left_paddle_y < window_height - paddle_height/2) {
+            left_paddle_y += paddle_speed;
         }
 
     }
@@ -88,7 +88,7 @@ function move_right_ai_paddle (to_this_y) {
 
 function move_right_ai() {
   // if the ball is moving left, go back to center
-  if (ball_x_dir == 'left') {
+  if (ball.x_dir == 'left') {
     move_right_ai_paddle(WINDOW_HEIGHT/2);
     return;
   }
