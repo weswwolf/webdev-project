@@ -36,22 +36,22 @@ function move_player() {
     }
     if (ui_slider) {
         // check for slider value to move paddle
-        if (left_paddle.y > touch_slider.val && left_paddle.y > paddle_height/2) {
-            left_paddle.y -= paddle_speed;
+        if (left_paddle.y > touch_slider.val && left_paddle.y > PADDLE_HEIGHT) {
+            left_paddle.y -= PADDLE_SPEED;
         }
         // check for slider value to move paddle
-        if (left_paddle.y < touch_slider.val && left_paddle.y < window_height - paddle_height/2) {
-            left_paddle.y += paddle_speed;
+        if (left_paddle.y < touch_slider.val && left_paddle.y < WINDOW_HEIGHT - PADDLE_HEIGHT) {
+            left_paddle.y += PADDLE_SPEED;
         }
     }
     else {
         // on keypress W move left paddle UP
         if (keyIsDown(87) && left_paddle_y > paddle_height/2) {
-            left_paddle_y -= paddle_speed;
+            left_paddle_y -= PADDLE_SPEED;
         }
         // on keypress S move left paddle DOWN
         if (keyIsDown(83) && left_paddle_y < window_height - paddle_height/2) {
-            left_paddle_y += paddle_speed;
+            left_paddle_y += PADDLE_SPEED;
         }
 
     }

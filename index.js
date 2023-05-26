@@ -1,3 +1,8 @@
+window.addEventListener('message', function (event) {
+    const message = event.data;
+    console.log(message);
+});
+
 // js script for index.html
 function toggleBackgroundDrawing() {
     var checkbox = document.getElementById("draw-bg-checkbox");

@@ -6,7 +6,7 @@ function start_game() {
   ball.move = true;
   ball.speed = BALL_SPEED_INITIAL;
   start_text="";
-  
+  //sendMessage();  
 }
 // on mouse press, start the game of pong!
 function mousePressed() {
@@ -125,7 +125,7 @@ function right_ai_calculate_ball_y() {
     // randomly add or take away some y value
     getRandomInt(2) == 1 ? predict_y += offset: predict_y -= offset;
   }
-  print("right ai calculates: " + right_ai_find_ball_y);
+  //print("right ai calculates: " + right_ai_find_ball_y);
   return predict_y;
 }
 
@@ -192,3 +192,7 @@ function setUISlider(checked) {
 function setAIWarfare(checked) {
   ai_warfare = checked;
 }
+/*
+function sendMessage() {
+  window.top.postMessage("stats");
+}*/

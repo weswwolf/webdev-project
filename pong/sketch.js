@@ -7,13 +7,14 @@ const PADDLE_WIDTH = 20;
 const PADDLE_SPEED = 3;
 // BALL CONST
 const BALL_DIAMETER = 15;
-const BALL_SPEED_INITIAL = 7;
+const BALL_SPEED_INITIAL = 2;
 const BALL_SPEED_MAX = 8;
 // AI CONST
 const AI_ERROR_INITIAL = 32;
 const AI_ERROR_TWEAK = 1.88;
 
 
+// BALL VAR
 let ball = {
     x: WINDOW_WIDTH/2,
     y: WINDOW_HEIGHT/2,
@@ -22,19 +23,11 @@ let ball = {
     moving: false,
     speed: BALL_SPEED_INITIAL,
 }
-// BALL VAR
-//let ball_speed = BALL_SPEED_INITIAL;
-//let ball_x = WINDOW_WIDTH/2;
-//let ball_y = WINDOW_HEIGHT/2;
-//let ball_x_dir = 'right';
-//let ball_y_dir = 'up'
-//let ball_move = false;
 // AI VAR
 // max difficulty = ai_errror_initial / ai_error_tweak
 let difficulty = 1;
 let left_ai_find_ball_y = WINDOW_HEIGHT/2;
 let right_ai_find_ball_y = WINDOW_HEIGHT/2;
-let ai_score = 0;
 
 // PADDLE VAR
 let left_paddle = {
@@ -52,6 +45,7 @@ let gui; // creates the gui that holds GUI elements
 let touch_slider; // allow user input on a GUI slider
 // GAME 
 let player_score = 0;
+let ai_score = 0;
 let start_text = "Click on the game area to start";
 let game_started = false;
 // OPTIONS
@@ -59,6 +53,7 @@ let draw_background = true;
 let perfect_ai = true;
 let ui_slider = false;
 let ai_warfare = true;
+
 
 // called once when the sketch starts
 function setup() {
@@ -78,28 +73,39 @@ function setup() {
 
 // called every frame 
 function draw() {
+  // draw the pong paddles and game text
+  draw_game_objects_and_text();
+  // use the ball's x-dir and y-dir to determine the new position
+  moveBall();
+  // check for collision between ball and left or right paddle
+  check_collision();
+  // move the player with either keyboard keys, AI, or slider GUI.
+  move_player();
+  // use the calculated position to move the paddle accordingly.
+  move_right_ai();
+}
+
+function draw_game_objects_and_text() {
   if (draw_background) {
     background(0); 
   }
+  // set the draw color to white
   color(255);
+  // draw the objects center at the point specified
   rectMode(CENTER);
-  moveBall();
-  check_collision();
-  move_player();
-  move_right_ai();
+  // draw the shapes to the screen
   let draw_left_paddle = rect(left_paddle.x, left_paddle.y, PADDLE_WIDTH, PADDLE_HEIGHT);
   let draw_right_paddle = rect(right_paddle.x, right_paddle.y, PADDLE_WIDTH, PADDLE_HEIGHT);
   let draw_ball = circle(ball.x, ball.y, BALL_DIAMETER);
+  // center the text on the position provided
   textAlign(CENTER, CENTER);
-  fill(255);
+  fill(255); // white text color
+  // draw the text
   text(start_text, WINDOW_WIDTH/2, WINDOW_HEIGHT/5);
   text(player_score, WINDOW_WIDTH/10, WINDOW_HEIGHT/5);
   text(ai_score, 9*WINDOW_WIDTH/10, WINDOW_HEIGHT/5);
   //let user_options = text(radio.value(), 40, 40);
   if (ui_slider) {
     drawGui();
-  }
-  if (touch_slider.isChanged) {
-    print("slider value: " + touch_slider.val);
   }
 }
