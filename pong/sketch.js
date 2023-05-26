@@ -8,6 +8,7 @@ const paddle_speed = 2.5;
 // BALL CONST
 const ball_diameter = 15;
 const ball_speed_initial = 2;
+const MAX_BALL_SPEED = 13;
 // AI CONST
 const ai_error_initial = 32;
 const ai_error_tweak = 1.88;
@@ -22,7 +23,8 @@ let ball_move = false;
 // AI VAR
 // max difficulty = ai_errror_initial / ai_error_tweak
 let difficulty = 1;
-let ai_find_ball_y = window_height/2;
+let left_ai_find_ball_y = window_height/2;
+let right_ai_find_ball_y = window_height/2;
 let ai_score = 0;
 // PADDLE VAR
 let left_paddle_x = window_width/5;
@@ -66,7 +68,7 @@ function draw() {
   moveBall();
   check_collision();
   move_player();
-  move_ai();
+  move_right_ai();
   let left_paddle = rect(left_paddle_x, left_paddle_y, paddle_width, paddle_height);
   let right_paddle = rect(right_paddle_x, right_paddle_y, paddle_width, paddle_height);
   let ball = circle(ball_x, ball_y, ball_diameter);

@@ -25,6 +25,13 @@ function moveBall() {
 }
 
 function move_player() {
+    if (ball_x_dir == 'right') {
+        move_left_ai_paddle(window_height/2);
+        return;
+    }
+    move_left_ai_paddle(left_ai_find_ball_y);
+    return;
+    /*
     if (ui_slider) {
         // check for slider value to move paddle
         if (left_paddle_y > touch_slider.val && left_paddle_y > paddle_height/2) {
@@ -45,7 +52,7 @@ function move_player() {
             left_paddle_y += paddle_speed;
         }
 
-    }
+    }*/
     // space bar to play game for convenience
     if (keyIsDown(32)) {
         mousePressed();
@@ -53,10 +60,22 @@ function move_player() {
 
 }
 
-function move_ai_paddle (to_this_y) {
+function move_left_ai_paddle (to_this_y) {
   // padding used to prevent the paddle from moving back and forth
   // once it has reached the area it is supposed to be in.
-  let padding = 3;
+  let padding = 1.5;
+  if (left_paddle_y < to_this_y - padding && left_paddle_y < window_height - paddle_height/2) {
+    left_paddle_y += paddle_speed;
+  }
+  else if (left_paddle_y > to_this_y + padding && left_paddle_y > paddle_height/2) {
+    left_paddle_y -= paddle_speed;
+  }
+}
+
+function move_right_ai_paddle (to_this_y) {
+  // padding used to prevent the paddle from moving back and forth
+  // once it has reached the area it is supposed to be in.
+  let padding = 1.5;
   if (right_paddle_y < to_this_y - padding && right_paddle_y < window_height - paddle_height/2) {
     right_paddle_y += paddle_speed;
   }
@@ -65,11 +84,11 @@ function move_ai_paddle (to_this_y) {
   }
 }
 
-function move_ai() {
+function move_right_ai() {
   // if the ball is moving left, go back to center
   if (ball_x_dir == 'left') {
-    move_ai_paddle(window_height/2);
+    move_right_ai_paddle(window_height/2);
     return;
   }
-  move_ai_paddle(ai_find_ball_y);
+  move_right_ai_paddle(right_ai_find_ball_y);
 }
