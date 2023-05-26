@@ -61,9 +61,11 @@ function left_ai_calculate_ball_y() {
     }
     if (predict_y <= 0) {
       current_ball_dir = 'down';
+      predict_y = 0;
     }
     if (predict_y >= window_height) {
       current_ball_dir ='up';
+      predict_y = window_height;
     }
   }
   

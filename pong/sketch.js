@@ -7,8 +7,8 @@ const paddle_width = 20;
 const paddle_speed = 2.5;
 // BALL CONST
 const ball_diameter = 15;
-const ball_speed_initial = 2;
-const MAX_BALL_SPEED = 13;
+const ball_speed_initial = 3;
+const MAX_BALL_SPEED = 13.5;
 // AI CONST
 const ai_error_initial = 32;
 const ai_error_tweak = 1.88;
