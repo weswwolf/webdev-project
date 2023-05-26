@@ -36,12 +36,12 @@ function move_player() {
     }
     if (ui_slider) {
         // check for slider value to move paddle
-        if (left_paddle_y > touch_slider.val && left_paddle_y > paddle_height/2) {
-            left_paddle_y -= paddle_speed;
+        if (left_paddle.y > touch_slider.val && left_paddle.y > paddle_height/2) {
+            left_paddle.y -= paddle_speed;
         }
         // check for slider value to move paddle
-        if (left_paddle_y < touch_slider.val && left_paddle_y < window_height - paddle_height/2) {
-            left_paddle_y += paddle_speed;
+        if (left_paddle.y < touch_slider.val && left_paddle.y < window_height - paddle_height/2) {
+            left_paddle.y += paddle_speed;
         }
     }
     else {
@@ -66,11 +66,11 @@ function move_left_ai_paddle (to_this_y) {
   // padding used to prevent the paddle from moving back and forth
   // once it has reached the area it is supposed to be in.
   let padding = 1;
-  if (left_paddle_y < to_this_y - padding && left_paddle_y < window_height - paddle_height) {
-    left_paddle_y += paddle_speed;
+  if (left_paddle.y < to_this_y - padding && left_paddle.y < window_height - paddle_height) {
+    left_paddle.y += paddle_speed;
   }
-  else if (left_paddle_y > to_this_y + padding && left_paddle_y > paddle_height) {
-    left_paddle_y -= paddle_speed;
+  else if (left_paddle.y > to_this_y + padding && left_paddle.y > paddle_height) {
+    left_paddle.y -= paddle_speed;
   }
 }
 

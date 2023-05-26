@@ -146,10 +146,10 @@ function check_collision() {
     }
   
    // collision with left paddle
-  if (ball_y > left_paddle_y - paddle_height/2 &&
-      ball_y < left_paddle_y + paddle_height/2 && 
-      ball_x > left_paddle_x - paddle_width/2 &&
-      ball_x < left_paddle_x + paddle_width/2)
+  if (ball_y > left_paddle.y - paddle_height/2 &&
+      ball_y < left_paddle.y + paddle_height/2 && 
+      ball_x > left_paddle.x - paddle_width/2 &&
+      ball_x < left_paddle.x + paddle_width/2)
     {
         // we only want to calculate the ai move once
         if (ball_x_dir != 'right') {

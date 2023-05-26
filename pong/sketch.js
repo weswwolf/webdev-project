@@ -26,7 +26,13 @@ let difficulty = 1;
 let left_ai_find_ball_y = window_height/2;
 let right_ai_find_ball_y = window_height/2;
 let ai_score = 0;
+
 // PADDLE VAR
+let left_paddle = {
+    x: window_width/5,
+    y: window_height/2,
+}
+
 let left_paddle_x = window_width/5;
 let left_paddle_y = window_height/2;
 let right_paddle_x = 4*window_width/5;
@@ -71,9 +77,9 @@ function draw() {
   check_collision();
   move_player();
   move_right_ai();
-  let left_paddle = rect(left_paddle_x, left_paddle_y, paddle_width, paddle_height);
-  let right_paddle = rect(right_paddle_x, right_paddle_y, paddle_width, paddle_height);
-  let ball = circle(ball_x, ball_y, ball_diameter);
+  let draw_left_paddle = rect(left_paddle.x, left_paddle.y, paddle_width, paddle_height);
+  let draw_right_paddle = rect(right_paddle_x, right_paddle_y, paddle_width, paddle_height);
+  let draw_ball = circle(ball_x, ball_y, ball_diameter);
   textAlign(CENTER, CENTER);
   fill(255);
   text(start_text, window_width/2, window_height/5);
