@@ -27,10 +27,15 @@ it on my own mobile device.
 Used another p5 library extension to add GUI slider to the pong game.
 Early in making the pong game, i noticed I could decide not to draw the background
 which results in really interesting look. So, I added this as a user option checkbox.
-I want to add more user options!
-
+Added more user options: Toggle perfect AI, and toggle Slider UI.
+Used lighthouse to determine WEBP images are better than PNG for compression.
+Used lighthouse to determine that 'defer' is useful for loading scripts after the page
+Put most section contents inside of containers with rows and cols for cleaner look.
 
 https://p5js.org/reference/#/p5/text
+
+GUI used for vertical slider
+https://github.com/L05/p5.touchgui
 
 links 
 ==============

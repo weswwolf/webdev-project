@@ -39,7 +39,7 @@ let game_started = false;
 // OPTIONS
 let draw_background = true;
 let perfect_ai = false;
-let ui_slider = true;
+let ui_slider = false;
 
 // called once when the sketch starts
 function setup() {
