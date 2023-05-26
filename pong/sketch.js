@@ -2,13 +2,13 @@
 const window_height = 150; 
 const window_width = 400;
 // PADDLE CONST
-const paddle_height = 50;
+const paddle_height = 17;
 const paddle_width = 20;
-const paddle_speed = 2.5;
+const paddle_speed = 3;
 // BALL CONST
 const ball_diameter = 15;
-const ball_speed_initial = 3;
-const MAX_BALL_SPEED = 13.5;
+const ball_speed_initial = 7;
+const MAX_BALL_SPEED = 8;
 // AI CONST
 const ai_error_initial = 32;
 const ai_error_tweak = 1.88;
@@ -40,9 +40,9 @@ let start_text = "Click on the game area to start";
 let game_started = false;
 // OPTIONS
 let draw_background = true;
-let perfect_ai = false;
+let perfect_ai = true;
 let ui_slider = false;
-let ai_warfare = false;
+let ai_warfare = true;
 
 // called once when the sketch starts
 function setup() {
@@ -57,6 +57,7 @@ function setup() {
   canvasElement.addEventListener("touchstart", function(event) {
     event.preventDefault();
   });
+  start_game();
 }
 
 // called every frame 

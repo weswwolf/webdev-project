@@ -61,11 +61,13 @@ function left_ai_calculate_ball_y() {
     }
     if (predict_y <= 0) {
       current_ball_dir = 'down';
-      predict_y = 0;
+      predict_y = 1;
+      predict_x -= 1;
     }
     if (predict_y >= window_height) {
       current_ball_dir ='up';
-      predict_y = window_height;
+      predict_y = window_height-1;
+      predict_x -=1;
     }
   }
   
@@ -104,9 +106,13 @@ function right_ai_calculate_ball_y() {
     }
     if (predict_y <= 0) {
       current_ball_dir = 'down';
+      predict_y = 1;
+      predict_x += 1;
     }
     if (predict_y >= window_height) {
       current_ball_dir ='up';
+      predict_y = window_height-1;
+      predict_x +=1;
     }
   }
   
@@ -119,7 +125,7 @@ function right_ai_calculate_ball_y() {
     // randomly add or take away some y value
     getRandomInt(2) == 1 ? predict_y += offset: predict_y -= offset;
   }
-
+  print("right ai calculates: " + right_ai_find_ball_y);
   return predict_y;
 }
 
@@ -146,11 +152,13 @@ function check_collision() {
       ball_x < left_paddle_x + paddle_width/2)
     {
         // we only want to calculate the ai move once
-
-        right_ai_find_ball_y = right_ai_calculate_ball_y();
-        ball_x_dir = 'right';
-        if (ball_speed < MAX_BALL_SPEED){
-          ball_speed += 0.25;
+        if (ball_x_dir != 'right') {
+          // collide
+          right_ai_find_ball_y = right_ai_calculate_ball_y();
+          ball_x_dir = 'right';
+          if (ball_speed < MAX_BALL_SPEED){
+            ball_speed += 0.25;
+          }
         }
     }
 
