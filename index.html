@@ -189,8 +189,7 @@
                     <p>Instructions: click on the game window, and use <b>W</b> and <b>S</b> keys to move up and down, and <b>spacebar</b> to start the ball. If you are on a mobile device, you can toggle the UI slider on for touch control. Check out the options panel below the game!</p>
                 </div>
             <div class="col-12 flex">
-                <title>Pong game</title>
-                <iframe src="pong/pong.html" id="pong" scrolling="no" defer></iframe>
+                <iframe src="pong/pong.html" id="pong" scrolling="no" title="Pong Game" defer></iframe>
             </div>
             <div class="col-6 container">
                 <legend>Options Panel</legend> 
@@ -221,40 +220,58 @@
                 <img src="/images/travelling-salesman/game-window.webp" alt="A picture showing the inventory with items, dialogue, messagebox, and game window." class="img-fluid solid-black-border"> 
             </div>
         </div>
-
-    </div>
           
-        <h2>3D Multiplayer Chess</h2>
-        <p>This is a project that I did for my own learning, completely separate from my school work. It uses Unity as the game engine with C#, and uses PUN (Photon Engine) to implement the multiplayer aspect. This project happened over the course of a few months, involving creating the assets using Blender. </p>
-        <p>The images below showing the blue and red tiles are checking for collision. This is a very rudimentary solution and certainly not the most elegant, but it worked. 
-        <div class="container">
-            <div class="row">
-                <div class="col-4 col-md-2">
-                    <img src="/images/3d-chess/devlog1.PNG" alt="" class="img-fluid">
-                </div>
-                <div class="col-4 col-md-2">
-                    <img src="/images/3d-chess/devlog7.PNG" alt="" class="img-fluid">
-                </div>
-                <div class="col-4 col-md-2">
-                    <img src="/images/3d-chess/devlog3.PNG" alt="" class="img-fluid">
-                </div>
-                <div class="col-4 col-md-2">
-                    <img src="/images/3d-chess/devlog4.PNG" alt="" class="img-fluid">
-                </div>
-                <div class="col-4 col-md-2">
-                    <img src="/images/3d-chess/devlog5.PNG" alt="" class="img-fluid">
-                </div>
-                <div class="col-4 col-md-2">
-                    <img src="/images/3d-chess/devlog_2.PNG" alt="" class="img-fluid">
-                </div>
+        <div class="row flex">
+            <div class="col-12">
+                <h2>3D Multiplayer Chess</h2>
+            </div>
+            <div class="col-11">
+                <p>This is a project that I did for my own learning, completely separate from my school work. It uses Unity as the game engine with C#, and uses PUN (Photon Engine) to implement the multiplayer aspect. This project happened over the course of a few months, involving creating the assets using Blender. </p>
+                <p>The images below showing the blue and red tiles are checking for collision. This is a very rudimentary solution and certainly not the most elegant, but it worked. 
             </div>
         </div>
-        <img src="/images/3d-chess/3d-chess.webp" alt="A rendered image of chess pieces on a board, inside an editor." class="img-fluid">
+        <div class="row flex align-items-center">
+            <div class="col-6 col-md-4 col-lg-2">
+                <img src="/images/3d-chess/devlog1.PNG" alt="" class="img-fluid">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <img src="/images/3d-chess/devlog7.PNG" alt="" class="img-fluid">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <img src="/images/3d-chess/devlog3.PNG" alt="" class="img-fluid">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <img src="/images/3d-chess/devlog4.PNG" alt="" class="img-fluid">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <img src="/images/3d-chess/devlog5.PNG" alt="" class="img-fluid">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <img src="/images/3d-chess/devlog_2.PNG" alt="" class="img-fluid">
+            </div>
+            <div class="col-11">
+                <img src="/images/3d-chess/3d-chess.webp" alt="A rendered image of chess pieces on a board, inside an editor." class="img-fluid">
+            </div>
+        </div>
     </section>
 
     <section>
-        <h1>Contact</h1>
-        <h2>send me an email at wolfwes@pdx.edu</h2>
+        <div class="container">
+            <div class="row">
+            </div>
+            <div class="row flex align-items-center">
+                <form action="https://formsubmit.co/0701a2e09b6b43eb0d10f19aca5de9ee" method="POST" class="flex flex-column align-items-center">
+                    <legend>Send me a message!</legend>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" size="45" placeholder="Your Name"><br>
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" size="45" placeholder="email@domain.tld"><br>
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" cols="45" rows="5" placeholder="I want to tell you..."></textarea></br>
+                    <input type="submit" value="Send!" style="width: 100%">
+                </form>
+            </div>
+        </div>
     </section>
 
     <div class="container-fluid navbar-style">
