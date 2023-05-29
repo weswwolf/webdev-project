@@ -32,6 +32,12 @@ Used lighthouse to determine WEBP images are better than PNG for compression.
 Used lighthouse to determine that 'defer' is useful for loading scripts after the page
 Put most section contents inside of containers with rows and cols for cleaner look.
 
+5/29/2023
+Looked at the page for a long time. Just looking at different window sizes and making 
+sure the content is responsive and appears nice at every window size. Reduced size of 
+dog images which were way too large on full size screens. put some contents inside containers
+for nicer appearance. (using 11 cols of 12 leaves a nice padding on sides).
+
 https://p5js.org/reference/#/p5/text
 
 GUI used for vertical slider
