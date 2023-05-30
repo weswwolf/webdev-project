@@ -46,12 +46,12 @@ function move_player() {
     }
     else {
         // on keypress W move left paddle UP
-        if (keyIsDown(87) && left_paddle_y > paddle_height/2) {
-            left_paddle_y -= PADDLE_SPEED;
+        if (keyIsDown(87) && left_paddle.y > PADDLE_HEIGHT/2) {
+            left_paddle.y -= PADDLE_SPEED;
         }
         // on keypress S move left paddle DOWN
-        if (keyIsDown(83) && left_paddle_y < window_height - paddle_height/2) {
-            left_paddle_y += PADDLE_SPEED;
+        if (keyIsDown(83) && left_paddle.y < WINDOW_HEIGHT - PADDLE_HEIGHT/2) {
+            left_paddle.y += PADDLE_SPEED;
         }
 
     }
