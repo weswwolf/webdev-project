@@ -38,11 +38,6 @@ sure the content is responsive and appears nice at every window size. Reduced si
 dog images which were way too large on full size screens. put some contents inside containers
 for nicer appearance. (using 11 cols of 12 leaves a nice padding on sides).
 
-https://p5js.org/reference/#/p5/text
-
-GUI used for vertical slider
-https://github.com/L05/p5.touchgui
-
 links 
 ==============
 github repo:

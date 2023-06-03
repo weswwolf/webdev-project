@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Landing Page for Wes</title>
+
     <!-- bootstrap link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css"> <!--allow other content to load first-->
@@ -21,36 +22,35 @@
             </div>
             <div class="row nav-row align-items-center">
                 <div class="nav-item col-6 col-sm-3 col-md-2 col-lg-2">
-                    <button class="btn btn-default btn-lg shadow-none">
-                        <a href="#about">
+                    <a href="#about">
+                        <span class="btn btn-default btn-lg shadow-none">
                             About
-                        </a>
-                    </button>
+                        </span>
+                    </a>
 
                 </div>
                 <div class="nav-item col-6 col-sm-3 col-md-2 col-lg-2">
-                    <button class="btn btn-default btn-lg shadow-none">
-                        <a href="#experience">
+                    <a href="#experience">
+                        <span class="btn btn-default btn-lg shadow-none">
                             Experience
-                        </a>
-                    </button>
+                        </span>
+                    </a>
                 </div>
                 <div class="nav-item col-6 col-sm-3 col-md-2 col-lg-2">
-                    <button class="btn btn-default btn-lg shadow-none">
-                        <a href="#projects">
+                    <a href="#projects">
+                        <span class="btn btn-default btn-lg shadow-none">
                             Projects
-                        </a>
-                    </button>
+                        </span>
+                    </a>
                 </div>
                 <div class="nav-item col-6 col-sm-3 col-md-2 col-lg-2">
-                    <button class="btn btn-default btn-lg shadow-none">
-                        <a href="#contact">
+                    <a href="#contact">
+                        <span class="btn btn-default btn-lg shadow-none">
                            Contact 
-                        </a>
-                    </button>
+                        </span>
+                    </a>
                 </div>
             </div>
-
         </div>
     </nav>
 
@@ -161,10 +161,10 @@
 
             <div class="row flex">
                 <div class="col-12">
-                    <h2>University Courses<h2>
+                    <h2>University Courses</h2>
                 </div>
                 <div class="col-12 col-md-5 col-lg-3 flex flex-column align-items-center justify-content-start">
-                    <h3>Lower Level Computer Science<h3>
+                    <h3>Lower Level Computer Science</h3>
                     <ul class="list-group">
                         <li>CS 162: Introduction to Computer Science</li>
                         <li>CS 163: Data Structures </li>
@@ -175,7 +175,7 @@
                     </ul>
                 </div>
                 <div class="col-12 col-md-5 col-lg-4 flex flex-column align-items-center justify-content-start">
-                    <h3>Upper Level Computer Science<h3>
+                    <h3>Upper Level Computer Science</h3>
                     <ul class="list-group">
                         <li>CS 305: Societal, Ethical, Legal <br>implications of Computing</li>
                         <li>CS 314: Elements of Software Engineering</li>
@@ -187,7 +187,7 @@
                     </ul>
                 </div>
                 <div class="col-12 col-md-5 col-lg-3 flex flex-column align-items-center justify-content-start">
-                    <h3>Other interesting courses<h3>
+                    <h3>Other interesting courses</h3>
                     <ul class="list-group">
                         <li>SYSC 330U: Models in Science</li>
                         <li>PHL 320U: Critical Thinking</li>
@@ -214,6 +214,7 @@
                     <p>I originally started with a perfect AI, but that's boring, so now it makes a mistake every once in a while. If you play long enough, you might notice some details like the ball is slowly speeding up. Or, how the AI gracefully returns to the center after each hit, and waits for you to strike back before moving!</p>
                     <p>Instructions: click on the game window, and use <b>W</b> and <b>S</b> keys to move up and down, and <b>spacebar</b> to start the ball. If you are on a mobile device, you can toggle the UI slider on for touch control. Check out the options panel below the game!</p>
                 </div>
+            </div>
             <div class="col-12 flex">
                 <iframe src="pong/pong.html" id="pong" scrolling="no" title="Pong Game" defer></iframe>
             </div>
@@ -228,55 +229,54 @@
                 <label for="AI-warfare-checkbox">AI Warfare</label>
                 <input type="checkbox" id="AI-warfare-checkbox" onchange="toggleAIWarfare()" checked>
             </div>
-        </div>
-        <div class="row flex">
-            <div class="col-12">
-                <h2>The Travelling Salesman</h2>
+            <div class="row flex">
+                <div class="col-12">
+                    <h2>The Travelling Salesman</h2>
+                </div>
+                <div class="col-11 flex flex-column">
+                    <p>This is a term project for my rust class which uses bevy as the game engine. It is a game about learning the recipes to combine items into new items.</p>
+                    <p>Some sample recipes are show below. You can use an axe to kill a chicken, or build a fishing pole from a stick, hook, and rope!</p>
+                    <img src="/images/travelling-salesman/sample-recipe-1.webp" alt="A picture showing the inventory with items, dialogue, messagebox, and game window." class="img-fluid solid-black-border">
+                    <img src="/images/travelling-salesman/sample-recipe-2.webp" alt="A picture showing the inventory with items, dialogue, messagebox, and game window." class="img-fluid solid-black-border"> 
+                    <p>Bevy game engine uses a common programming paradigm especially prevalent in world generation called ECS which stands for entity component system. Entities are instances that hold the games data. For example, one entity on the screen is an Inventory, as you can see on the World Inspector. Entities have Components which hold information about them. In our game, Inventory Items need a Component that has information about the item name, description, and image path, as well as a clickable button.
+                    <p>Entities are acted on by systems. This can happen either one time at startup, or every frame of the game. These systems usually rely on querying for Entities, Components, and Resources.</p>
+                    <p>Some inventory items have a Timing Component. This allows things like chickens to make eggs on a randomized timer. Or raw chicken meat to turn to rotten chicken meat if you don't use it!</p>
+                    <p>The game inspector plugin also allows us to make modifications to the game while it is running and observe the effects, as well as being useful for debugging.</p>
+                    <p>I don't claim to be an artist, but making your own assets feels rewarding, and I'm proud to say I made all of these assets myself.</p>
+                    <img src="/images/travelling-salesman/game-window.webp" alt="A picture showing the inventory with items, dialogue, messagebox, and game window." class="img-fluid solid-black-border"> 
+                </div>
             </div>
-            <div class="col-11 flex flex-column">
-                <p>This is a term project for my rust class which uses bevy as the game engine. It is a game about learning the recipes to combine items into new items.</p>
-                <p>Some sample recipes are show below. You can use an axe to kill a chicken, or build a fishing pole from a stick, hook, and rope!</p>
-                <img src="/images/travelling-salesman/sample-recipe-1.webp" alt="A picture showing the inventory with items, dialogue, messagebox, and game window." class="img-fluid solid-black-border">
-                <img src="/images/travelling-salesman/sample-recipe-2.webp" alt="A picture showing the inventory with items, dialogue, messagebox, and game window." class="img-fluid solid-black-border"> 
-                <p>Bevy game engine uses a common programming paradigm especially prevalent in world generation called ECS which stands for entity component system. Entities are instances that hold the games data. For example, one entity on the screen is an Inventory, as you can see on the World Inspector. Entities have Components which hold information about them. In our game, Inventory Items need a Component that has information about the item name, description, and image path, as well as a clickable button.
-                <p>Entities are acted on by systems. This can happen either one time at startup, or every frame of the game. These systems usually rely on querying for Entities, Components, and Resources.</p>
-                <p>Some inventory items have a Timing Component. This allows things like chickens to make eggs on a randomized timer. Or raw chicken meat to turn to rotten chicken meat if you don't use it!</p>
-                <p>The game inspector plugin also allows us to make modifications to the game while it is running and observe the effects, as well as being useful for debugging.</p>
-                <p>I don't claim to be an artist, but making your own assets feels rewarding, and I'm proud to say I made all of these assets myself.</p>
-                <img src="/images/travelling-salesman/game-window.webp" alt="A picture showing the inventory with items, dialogue, messagebox, and game window." class="img-fluid solid-black-border"> 
+            <div class="row flex">
+                <div class="col-12">
+                    <h2>3D Multiplayer Chess</h2>
+                </div>
+                <div class="col-11">
+                    <p>This is a project that I did for my own learning, completely separate from my school work. It uses Unity as the game engine with C#, and uses PUN (Photon Engine) to implement the multiplayer aspect. This project happened over the course of a few months, involving creating the assets using Blender. </p>
+                    <p>The images below showing the blue and red tiles are checking for collision. This is a very rudimentary solution and certainly not the most elegant, but it worked. 
+                </div>
             </div>
-        </div>
-          
-        <div class="row flex">
-            <div class="col-12">
-                <h2>3D Multiplayer Chess</h2>
-            </div>
-            <div class="col-11">
-                <p>This is a project that I did for my own learning, completely separate from my school work. It uses Unity as the game engine with C#, and uses PUN (Photon Engine) to implement the multiplayer aspect. This project happened over the course of a few months, involving creating the assets using Blender. </p>
-                <p>The images below showing the blue and red tiles are checking for collision. This is a very rudimentary solution and certainly not the most elegant, but it worked. 
-            </div>
-        </div>
-        <div class="row flex align-items-center">
-            <div class="col-6 col-md-4 col-lg-2">
-                <img src="/images/3d-chess/devlog1.PNG" alt="" class="img-fluid">
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-                <img src="/images/3d-chess/devlog7.PNG" alt="" class="img-fluid">
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-                <img src="/images/3d-chess/devlog3.PNG" alt="" class="img-fluid">
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-                <img src="/images/3d-chess/devlog4.PNG" alt="" class="img-fluid">
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-                <img src="/images/3d-chess/devlog5.PNG" alt="" class="img-fluid">
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-                <img src="/images/3d-chess/devlog_2.PNG" alt="" class="img-fluid">
-            </div>
-            <div class="col-11">
-                <img src="/images/3d-chess/3d-chess.webp" alt="A rendered image of chess pieces on a board, inside an editor." class="img-fluid">
+            <div class="row flex align-items-center">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <img src="/images/3d-chess/devlog1.PNG" alt="" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <img src="/images/3d-chess/devlog7.PNG" alt="" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <img src="/images/3d-chess/devlog3.PNG" alt="" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <img src="/images/3d-chess/devlog4.PNG" alt="" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <img src="/images/3d-chess/devlog5.PNG" alt="" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <img src="/images/3d-chess/devlog_2.PNG" alt="" class="img-fluid">
+                </div>
+                <div class="col-11">
+                    <img src="/images/3d-chess/3d-chess.webp" alt="A rendered image of chess pieces on a board, inside an editor." class="img-fluid">
+                </div>
             </div>
         </div>
     </section>
@@ -293,7 +293,7 @@
                     <label for="email">Your Email:</label>
                     <input type="email" id="email" name="email" size="45" placeholder="email@domain.tld"><br>
                     <label for="message">Message:</label>
-                    <textarea name="message" id="message" cols="45" rows="5" placeholder="I want to tell you..."></textarea></br>
+                    <textarea name="message" id="message" cols="45" rows="5" placeholder="I want to tell you..."></textarea><br>
                     <input type="submit" value="Send!" style="width: 100%">
                 </form>
             </div>
