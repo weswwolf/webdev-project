@@ -64,9 +64,12 @@
 
 
 #pong {
-    width: 400px;
-    height: 150px;
+    width: 430px;
+    height: 170px;
     border: none;
+    scale: 0.95;
+    overflow: hidden;
+    
 }
 
 @media (min-width: 576px) {
@@ -86,6 +89,7 @@
 
 @media (min-width: 992px) {
     #pong {
+        
         margin: 90px;
         scale: 2.0;
     }

@@ -112,10 +112,10 @@
                     <img src="/images/computer-hardware/computer-build-min.webp" alt="A brand new motherboard with ram and cpu attached sitting on a countertop." class="img-fluid">
                 </div>
                 <div class="col-4">
-                    <img src="/images/computer-hardware/custom-pc-1-squared-min.webp" alt="A brand new motherboard with ram and cpu attached sitting on a countertop." class="img-fluid">
+                    <img src="/images/computer-hardware/custom-pc-1-squared-min.webp" alt="A completed computer build that is ready to be used. It is turned on and has blue lights!" class="img-fluid">
                 </div>
                 <div class="col-4">
-                    <img src="/images/computer-hardware/custom-pc-2-min.webp" alt="A brand new motherboard with ram and cpu attached sitting on a countertop." class="img-fluid">
+                    <img src="/images/computer-hardware/custom-pc-2-min.webp" alt="A custom PC built for DAZ 3D Studio for an audio engineer, with an open panel and exposed hardware." class="img-fluid">
                 </div>
             </div>
             <div class="row flex">
@@ -216,10 +216,10 @@
                 </div>
             </div>
             <div class="col-12 flex">
-                <iframe src="pong/pong.html" id="pong" scrolling="no" title="Pong Game" defer></iframe>
+                <iframe src="pong/pong.html" id="pong" title="Pong Game"></iframe>
             </div>
             <div class="col-6 container">
-                <legend>Options Panel</legend> 
+                <h3>Options Panel</h3> 
                 <label for="draw-bg-checkbox">Draw Background</label>
                 <input type="checkbox" id="draw-bg-checkbox" onchange="toggleBackgroundDrawing()" checked>
                 <label for="perfect-ai-checkbox">Perfect AI</label>
@@ -236,8 +236,8 @@
                 <div class="col-11 flex flex-column">
                     <p>This is a term project for my rust class which uses bevy as the game engine. It is a game about learning the recipes to combine items into new items.</p>
                     <p>Some sample recipes are show below. You can use an axe to kill a chicken, or build a fishing pole from a stick, hook, and rope!</p>
-                    <img src="/images/travelling-salesman/sample-recipe-1.webp" alt="A picture showing the inventory with items, dialogue, messagebox, and game window." class="img-fluid solid-black-border">
-                    <img src="/images/travelling-salesman/sample-recipe-2.webp" alt="A picture showing the inventory with items, dialogue, messagebox, and game window." class="img-fluid solid-black-border"> 
+                    <img src="/images/travelling-salesman/sample-recipe-1.webp" alt="The recipe to Kill Chicken: axe and chicken produces axe, raw chicken, and feather." class="img-fluid solid-black-border">
+                    <img src="/images/travelling-salesman/sample-recipe-2.webp" alt="The recipe to Craft Fishing Pole: hook, rope, and stick produces fishing pole." class="img-fluid solid-black-border"> 
                     <p>Bevy game engine uses a common programming paradigm especially prevalent in world generation called ECS which stands for entity component system. Entities are instances that hold the games data. For example, one entity on the screen is an Inventory, as you can see on the World Inspector. Entities have Components which hold information about them. In our game, Inventory Items need a Component that has information about the item name, description, and image path, as well as a clickable button.
                     <p>Entities are acted on by systems. This can happen either one time at startup, or every frame of the game. These systems usually rely on querying for Entities, Components, and Resources.</p>
                     <p>Some inventory items have a Timing Component. This allows things like chickens to make eggs on a randomized timer. Or raw chicken meat to turn to rotten chicken meat if you don't use it!</p>
@@ -257,22 +257,22 @@
             </div>
             <div class="row flex align-items-center">
                 <div class="col-6 col-md-4 col-lg-2">
-                    <img src="/images/3d-chess/devlog1.PNG" alt="" class="img-fluid">
+                    <img src="/images/3d-chess/devlog1.PNG" alt="A chess board showing the possible moves of a single piece." class="img-fluid">
                 </div>
                 <div class="col-6 col-md-4 col-lg-2">
-                    <img src="/images/3d-chess/devlog7.PNG" alt="" class="img-fluid">
+                    <img src="/images/3d-chess/devlog7.PNG" alt="Oops! too many collision tiles spawned into the chess world!" class="img-fluid">
                 </div>
                 <div class="col-6 col-md-4 col-lg-2">
-                    <img src="/images/3d-chess/devlog3.PNG" alt="" class="img-fluid">
+                    <img src="/images/3d-chess/devlog3.PNG" alt="Sometimes the collision tiles start floating away..." class="img-fluid">
                 </div>
                 <div class="col-6 col-md-4 col-lg-2">
-                    <img src="/images/3d-chess/devlog4.PNG" alt="" class="img-fluid">
+                    <img src="/images/3d-chess/devlog4.PNG" alt="Different tiles hovering and intersecting chess pieces" class="img-fluid">
                 </div>
                 <div class="col-6 col-md-4 col-lg-2">
-                    <img src="/images/3d-chess/devlog5.PNG" alt="" class="img-fluid">
+                    <img src="/images/3d-chess/devlog5.PNG" alt="A chess piece is stopped in its tracks by another piece!" class="img-fluid">
                 </div>
                 <div class="col-6 col-md-4 col-lg-2">
-                    <img src="/images/3d-chess/devlog_2.PNG" alt="" class="img-fluid">
+                    <img src="/images/3d-chess/devlog_2.PNG" alt="A stack of collision tiles is starting to get out of control!" class="img-fluid">
                 </div>
                 <div class="col-11">
                     <img src="/images/3d-chess/3d-chess.webp" alt="A rendered image of chess pieces on a board, inside an editor." class="img-fluid">
@@ -283,11 +283,12 @@
 
     <section id="contact">
         <div class="container">
-            <div class="row">
+            <div class="row flex align-items-center">
+                <h2>Working together can be fun!</h2>
             </div>
             <div class="row flex align-items-center">
                 <form action="https://formsubmit.co/wolfwes@pdx.edu" method="POST" class="flex flex-column align-items-center">
-                    <legend>Send me a message!</legend>
+                    <h3>Send me a message with your info</h3>
                     <label for="name">Your Name:</label>
                     <input type="text" id="name" name="name" size="45" placeholder="Your Name"><br>
                     <label for="email">Your Email:</label>
