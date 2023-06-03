@@ -38,6 +38,12 @@ sure the content is responsive and appears nice at every window size. Reduced si
 dog images which were way too large on full size screens. put some contents inside containers
 for nicer appearance. (using 11 cols of 12 leaves a nice padding on sides).
 
+6/3/2023
+Today is the day to fix the semantic errors that were building up over time in my project.
+First, W3C index.html to uncover 28 errors! These are all fixed now. WAVEd' page to find missing
+and duplicate img alt text. Now fixed as well. Started to add some colors. 
+Added jumbotrons to wrap content. added background color(s).
+
 links 
 ==============
 github repo:
