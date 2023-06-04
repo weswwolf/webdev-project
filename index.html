@@ -9,7 +9,6 @@
     <!-- bootstrap link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css"> <!--allow other content to load first-->
-    <script src="index.js"></script>
 </head>
 <body>
     <!-- navbar -->
@@ -33,7 +32,7 @@
                 <div class="nav-item col-3 col-sm-3 col-md-2 col-lg-2">
                     <a href="#experience" onclick="scrollToSection(event, '#experience', 100)">
                         <span class="btn btn-default shadow-none">
-                            Experience
+                            Experiences
                         </span>
                     </a>
                 </div>
@@ -63,22 +62,20 @@
                 <h1 class="section-h1">About Me</h1>
             </div>
             <div class="col-12">
-                <div class="jumbotron">
-                    <div class="container">
-                        <div class="row">
-                            <!-- lots of flexbox attributes added-->
-                            <div class="col-xs-12 col-md-4 flex align-items-center justify-content-center flex-column text-center">
-                            <h1>Nice to meet you!</h1>
-                            <img src="/images/people/me.png" class="rounded-image img-fluid" alt="A headshot of the author, Wes, outside on a sunny day.">
-                            </div>
-                            <div class="col-xs-12 col-md-8">
-                                <p>My name is Wes, and I am a software developer with a love for game development.</p>
-                                <p>I got sick of making boring command line programs and decided to level up my skills by learning about graphical libraries.</p>
-                                <p>Over time, I've tried my hand at a bunch of different game engines using various languages and scripting techniques.</p>
-                                <p>One of the things I'm most proud of is this 3D online multiplayer chess game I made all by myself.</p>
-                                <p>I even designed all the assets using Blender. It was a ton of work, but I still remember the satisfaction and excitement I felt when I had it working.</p>
-                                <p>I love the creative freedom that software development offers. Sure, it can be frustrating when something doesn't work correctly, but there's nothing like the feeling of making a small win that eventually adds up to something amazing.</p>
-                            </div>
+                <div class="container-fluid">
+                    <div class="row jumbotron">
+                        <!-- lots of flexbox attributes added-->
+                        <div class="col-xs-12 col-md-4 flex align-items-center justify-content-center flex-column text-center">
+                        <h1>Nice to meet you!</h1>
+                        <img src="/images/people/me.png" class="rounded-image img-fluid" alt="A headshot of the author, Wes, outside on a sunny day.">
+                        </div>
+                        <div class="col-xs-12 col-md-8">
+                            <p>My name is Wes, and I am a software developer with a love for game development.</p>
+                            <p>I got sick of making boring command line programs and decided to level up my skills by learning about graphical libraries.</p>
+                            <p>Over time, I've tried my hand at a bunch of different game engines using various languages and scripting techniques.</p>
+                            <p>One of the things I'm most proud of is this 3D online multiplayer chess game I made all by myself.</p>
+                            <p>I even designed all the assets using Blender. It was a ton of work, but I still remember the satisfaction and excitement I felt when I had it working.</p>
+                            <p>I love the creative freedom that software development offers. Sure, it can be frustrating when something doesn't work correctly, but there's nothing like the feeling of making a small win that eventually adds up to something amazing.</p>
                         </div>
                     </div>
                 </div>
@@ -313,11 +310,11 @@
                     <form action="https://formsubmit.co/wolfwes@pdx.edu" method="POST" class="flex flex-column align-items-center">
                         <h3>Send me a message with your info</h3>
                         <label for="name">Your Name:</label>
-                        <input type="text" id="name" name="name" size="45" placeholder="Your Name"><br>
+                        <input type="text" id="name" name="name" placeholder="Your Name"><br>
                         <label for="email">Your Email:</label>
-                        <input type="email" id="email" name="email" size="45" placeholder="email@domain.tld"><br>
+                        <input type="email" id="email" name="email" placeholder="email@domain.tld"><br>
                         <label for="message">Message:</label>
-                        <textarea name="message" id="message" cols="45" rows="5" placeholder="I want to tell you..."></textarea><br>
+                        <textarea name="message" id="message" rows="5" placeholder="I want to tell you..."></textarea><br>
                         <input type="submit" value="Send!" style="width: 100%">
                     </form>
                 </div>
@@ -332,5 +329,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </body>
 </html>

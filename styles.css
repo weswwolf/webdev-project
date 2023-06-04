@@ -44,7 +44,7 @@ body {
 }
 
 .btn-default {
-    background-color: var(--second-blue);
+    background-color: var(--my-dark-blue);
     color: White;
 }
 

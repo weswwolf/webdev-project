@@ -3,6 +3,8 @@ window.addEventListener('message', function (event) {
     console.log(message);
 });
 
+window.addEventListener('resize', resizeInputs);
+
 // js script for index.html
 function toggleBackgroundDrawing() {
     var checkbox = document.getElementById("draw-bg-checkbox");
@@ -37,3 +39,29 @@ function scrollToSection(event, section, offset) {
         behavior: 'smooth'
     });
 }
+
+function resizeInputs() {
+    const name_input = document.getElementById('name');
+    const email_input = document.getElementById('email');
+    const message_input = document.getElementById('message');
+    const window_size = window.innerWidth;
+
+    if (window_size < 414) {
+        name_input.setAttribute('size', '15');
+        email_input.setAttribute('size', '15');
+        message_input.setAttribute('cols', '15');
+        return;
+    }
+    if (window_size < 700) {
+        name_input.setAttribute('size', '30');
+        email_input.setAttribute('size', '30');
+        message_input.setAttribute('cols', '30');
+        return;
+    }
+    name_input.setAttribute('size', '45');
+    email_input.setAttribute('size', '45');
+    message_input.setAttribute('cols', '45');
+    return;
+}
+
+resizeInputs();
