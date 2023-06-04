@@ -27,3 +27,13 @@ function toggleAIWarfare() {
     var iframe = document.getElementById("pong");
     iframe.contentWindow.setAIWarfare(checkbox.checked);
 }
+
+
+function scrollToSection(event, section, offset) {
+    event.preventDefault();
+    var target_position = document.querySelector(section).offsetTop - offset
+    window.scrollTo({
+        top: target_position,
+        behavior: 'smooth'
+    });
+}

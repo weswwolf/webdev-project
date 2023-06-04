@@ -11,10 +11,14 @@
 }
 
 .navbar-style {
-    margin-top: 0px;
-    margin-bottom: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /*margin-top: 0px;
+    margin-bottom: 50px;*/
     background-color: var(--my-dark-blue);
     color: white;
+    z-index: 10;
 }
 
 body {
@@ -115,4 +119,8 @@ body {
     flex-direction: column; 
     align-items: center;
     justify-content: center;
+}
+
+#about {
+    padding-top: 95px;
 }
