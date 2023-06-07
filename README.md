@@ -12,6 +12,9 @@ how to run the code
 Visit the webpage at: https://weswwolf.github.io/
 Use the navbar to quickly move to a specific region on the page
 
+to play the pong game, you can adjust the settings in the options panel
+to turn off 'AI warfare' allowing you control over the left player with W and S.
+
 outside sources used (tutorials)
 ======================
 BOOTSTRAP
@@ -20,12 +23,13 @@ https://www.w3schools.com/bootstrap/bootstrap_images.asp
 https://www.w3schools.com/bootstrap/bootstrap_jumbotron_header.asp
 ======================
 P5 Library
-
 https://p5js.org/reference/#/p5/text
 https://github.com/L04/p5.touchgui
-
-site deployed at
 ======================
+COLOR PALETTE
+https://coolors.co/
+======================
+site deployed at
 https://weswwolf.github.io/
 
 

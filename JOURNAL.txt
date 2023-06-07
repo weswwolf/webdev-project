@@ -44,6 +44,9 @@ First, W3C index.html to uncover 28 errors! These are all fixed now. WAVEd' page
 and duplicate img alt text. Now fixed as well. Started to add some colors. 
 Added jumbotrons to wrap content. added background color(s).
 
+6/7
+Looked over the page with W3C again. Made small style changes. Checked with Lighthouse and WAVE.
+
 links 
 ==============
 github repo:
