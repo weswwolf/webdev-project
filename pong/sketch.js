@@ -1,6 +1,6 @@
 // WINDOW CONST
 const WINDOW_HEIGHT = 150; 
-const WINDOW_WIDTH = 350;
+const WINDOW_WIDTH = 280;
 // PADDLE CONST
 const PADDLE_HEIGHT = 17;
 const PADDLE_WIDTH = 20;
@@ -31,12 +31,12 @@ let right_ai_find_ball_y = WINDOW_HEIGHT/2;
 
 // PADDLE VAR
 let left_paddle = {
-    x: WINDOW_WIDTH/5,
+    x: WINDOW_WIDTH/8,
     y: WINDOW_HEIGHT/2,
 }
 
 let right_paddle = {
-    x: 4*WINDOW_WIDTH/5,
+    x: 7*WINDOW_WIDTH/8,
     y: WINDOW_HEIGHT/2, 
 }
 
@@ -102,8 +102,8 @@ function draw_game_objects_and_text() {
   fill(255); // white text color
   // draw the text
   text(start_text, WINDOW_WIDTH/2, WINDOW_HEIGHT/5);
-  text(player_score, WINDOW_WIDTH/10, WINDOW_HEIGHT/5);
-  text(ai_score, 9*WINDOW_WIDTH/10, WINDOW_HEIGHT/5);
+  text(player_score, WINDOW_WIDTH/14, WINDOW_HEIGHT/5);
+  text(ai_score, 13*WINDOW_WIDTH/14, WINDOW_HEIGHT/5);
   //let user_options = text(radio.value(), 40, 40);
   if (ui_slider) {
     drawGui();
