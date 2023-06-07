@@ -58,9 +58,13 @@ body {
     padding: 5px;
 }
 
-.jumbotron {
+.jumbotron-style {
     display: flex;
     flex-direction: row;
+    background-color: white;
+    padding: 50px;
+    margin: 50px;
+    border-radius: 40px;
 }
 
 .nav-row {
@@ -71,6 +75,7 @@ body {
 
 .list-group li  {
    font-size: 18px;
+   margin: 10px;
 }
 
 #pong {
