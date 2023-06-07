@@ -1,5 +1,5 @@
 // WINDOW CONST
-const WINDOW_HEIGHT = 150; 
+const WINDOW_HEIGHT = 150;
 const WINDOW_WIDTH = 280;
 // PADDLE CONST
 const PADDLE_HEIGHT = 17;
@@ -13,37 +13,36 @@ const BALL_SPEED_MAX = 7;
 const AI_ERROR_INITIAL = 32;
 const AI_ERROR_TWEAK = 1.88;
 
-
 // BALL VAR
 let ball = {
-    x: WINDOW_WIDTH/2,
-    y: WINDOW_HEIGHT/2,
-    x_dir: 'right',
-    y_dir: 'up',
-    moving: false,
-    speed: BALL_SPEED_INITIAL,
-}
+  x: WINDOW_WIDTH / 2,
+  y: WINDOW_HEIGHT / 2,
+  x_dir: "right",
+  y_dir: "up",
+  moving: false,
+  speed: BALL_SPEED_INITIAL,
+};
 // AI VAR
 // max difficulty = ai_errror_initial / ai_error_tweak
 let difficulty = 1;
-let left_ai_find_ball_y = WINDOW_HEIGHT/2;
-let right_ai_find_ball_y = WINDOW_HEIGHT/2;
+let left_ai_find_ball_y = WINDOW_HEIGHT / 2;
+let right_ai_find_ball_y = WINDOW_HEIGHT / 2;
 
 // PADDLE VAR
 let left_paddle = {
-    x: WINDOW_WIDTH/8,
-    y: WINDOW_HEIGHT/2,
-}
+  x: WINDOW_WIDTH / 8,
+  y: WINDOW_HEIGHT / 2,
+};
 
 let right_paddle = {
-    x: 7*WINDOW_WIDTH/8,
-    y: WINDOW_HEIGHT/2, 
-}
+  x: (7 * WINDOW_WIDTH) / 8,
+  y: WINDOW_HEIGHT / 2,
+};
 
-// GUI 
+// GUI
 let gui; // creates the gui that holds GUI elements
 let touch_slider; // allow user input on a GUI slider
-// GAME 
+// GAME
 let player_score = 0;
 let ai_score = 0;
 let start_text = "Click on the game area to start";
@@ -53,7 +52,6 @@ let draw_background = true;
 let perfect_ai = true;
 let ui_slider = false;
 let ai_warfare = true;
-
 
 // called once when the sketch starts
 function setup() {
@@ -65,13 +63,13 @@ function setup() {
   // get a reference to the canvas
   let canvasElement = document.querySelector("#defaultCanvas0");
   // add an event listener preventing the scrolling on mobile devices
-  canvasElement.addEventListener("touchstart", function(event) {
+  canvasElement.addEventListener("touchstart", function (event) {
     event.preventDefault();
   });
   start_game();
 }
 
-// called every frame 
+// called every frame
 function draw() {
   // draw the pong paddles and game text
   draw_game_objects_and_text();
@@ -87,23 +85,33 @@ function draw() {
 
 function draw_game_objects_and_text() {
   if (draw_background) {
-    background(0); 
+    background(0);
   }
   // set the draw color to white
   color(255);
   // draw the objects center at the point specified
   rectMode(CENTER);
   // draw the shapes to the screen
-  let draw_left_paddle = rect(left_paddle.x, left_paddle.y, PADDLE_WIDTH, PADDLE_HEIGHT);
-  let draw_right_paddle = rect(right_paddle.x, right_paddle.y, PADDLE_WIDTH, PADDLE_HEIGHT);
+  let draw_left_paddle = rect(
+    left_paddle.x,
+    left_paddle.y,
+    PADDLE_WIDTH,
+    PADDLE_HEIGHT
+  );
+  let draw_right_paddle = rect(
+    right_paddle.x,
+    right_paddle.y,
+    PADDLE_WIDTH,
+    PADDLE_HEIGHT
+  );
   let draw_ball = circle(ball.x, ball.y, BALL_DIAMETER);
   // center the text on the position provided
   textAlign(CENTER, CENTER);
   fill(255); // white text color
   // draw the text
-  text(start_text, WINDOW_WIDTH/2, WINDOW_HEIGHT/5);
-  text(player_score, WINDOW_WIDTH/14, WINDOW_HEIGHT/5);
-  text(ai_score, 13*WINDOW_WIDTH/14, WINDOW_HEIGHT/5);
+  text(start_text, WINDOW_WIDTH / 2, WINDOW_HEIGHT / 5);
+  text(player_score, WINDOW_WIDTH / 14, WINDOW_HEIGHT / 5);
+  text(ai_score, (13 * WINDOW_WIDTH) / 14, WINDOW_HEIGHT / 5);
   //let user_options = text(radio.value(), 40, 40);
   if (ui_slider) {
     drawGui();

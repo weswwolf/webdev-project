@@ -1,22 +1,23 @@
-info about the project
-======================
-This project consists of a few components:
-1) A navbar that navigates to different sections on the one-page site.
-2) An About section -- brief introduction to highlight my professional experience
-3) A previous work section 
-4) A projects section showing previous projects I worked on
-5) A contact section
+# info about the project
 
-how to run the code 
-======================
+This project consists of a few components:
+
+1. A navbar that navigates to different sections on the one-page site.
+2. An About section -- brief introduction to highlight my professional experience
+3. A previous work section
+4. A projects section showing previous projects I worked on
+5. A contact section
+
+# how to run the code
+
 Visit the webpage at: https://weswwolf.github.io/
 Use the navbar to quickly move to a specific region on the page
 
 to play the pong game, you can adjust the settings in the options panel
 to turn off 'AI warfare' allowing you control over the left player with W and S.
 
-outside sources used (tutorials)
-======================
+# outside sources used (tutorials)
+
 BOOTSTRAP
 https://www.w3schools.com/bootstrap/bootstrap_grid_basic.asp
 https://www.w3schools.com/bootstrap/bootstrap_images.asp
@@ -31,6 +32,3 @@ https://coolors.co/
 ======================
 site deployed at
 https://weswwolf.github.io/
-
-
-
