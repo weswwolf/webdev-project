@@ -40,27 +40,30 @@ function scrollToSection(event, section, offset) {
     });
 }
 
+function set_size(name, email, message, size) {
+    name.setAttribute('size', size);
+    email.setAttribute('size', size);
+    message.setAttribute('cols', size);
+}
+
 function resizeInputs() {
-    const name_input = document.getElementById('name');
-    const email_input = document.getElementById('email');
-    const message_input = document.getElementById('message');
+    let name_input = document.getElementById('name');
+    let email_input = document.getElementById('email');
+    let message_input = document.getElementById('message');
     const window_size = window.innerWidth;
 
-    if (window_size < 414) {
-        name_input.setAttribute('size', '15');
-        email_input.setAttribute('size', '15');
-        message_input.setAttribute('cols', '15');
-        return;
+    if (window_size < 350) {
+        set_size(name_input, email_input, message_input, 15);
     }
-    if (window_size < 700) {
-        name_input.setAttribute('size', '30');
-        email_input.setAttribute('size', '30');
-        message_input.setAttribute('cols', '30');
-        return;
+    else if (window_size < 414) {
+        set_size(name_input, email_input, message_input, 20);
     }
-    name_input.setAttribute('size', '45');
-    email_input.setAttribute('size', '45');
-    message_input.setAttribute('cols', '45');
+    else if (window_size < 700) {
+        set_size(name_input, email_input, message_input, 35);
+    }
+    else {
+        set_size(name_input, email_input, message_input, 45);
+    }
     return;
 }
 

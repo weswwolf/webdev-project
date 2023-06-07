@@ -192,7 +192,3 @@ function setUISlider(checked) {
 function setAIWarfare(checked) {
   ai_warfare = checked;
 }
-/*
-function sendMessage() {
-  window.top.postMessage("stats");
-}*/
