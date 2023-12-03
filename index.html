@@ -23,7 +23,9 @@
         <div class="row nav-row align-items-center">
           <div class="nav-item col-3 col-sm-3 col-md-2 col-lg-2">
             <a href="#about" onclick="scrollToSection(event, '#about', 100)">
-              <span class="btn btn-default shadow-none"> About </span>
+              <span class="btn btn-default shadow-none">
+                <h4>About</h4>
+              </span>
             </a>
           </div>
           <div class="nav-item col-3 col-sm-3 col-md-2 col-lg-2">
@@ -31,7 +33,9 @@
               href="#experience"
               onclick="scrollToSection(event, '#experience', 100)"
             >
-              <span class="btn btn-default shadow-none"> Experiences </span>
+              <span class="btn btn-default shadow-none">
+                <h4>Experiences</h4>
+              </span>
             </a>
           </div>
           <div class="nav-item col-3 col-sm-3 col-md-2 col-lg-2">
@@ -39,7 +43,9 @@
               href="#projects"
               onclick="scrollToSection(event, '#projects', 100)"
             >
-              <span class="btn btn-default shadow-none"> Projects </span>
+              <span class="btn btn-default shadow-none">
+                <h4>Projects</h4>
+              </span>
             </a>
           </div>
           <div class="nav-item col-3 col-sm-3 col-md-2 col-lg-2">
@@ -47,7 +53,9 @@
               href="#contact"
               onclick="scrollToSection(event, '#contact', 100)"
             >
-              <span class="btn btn-default shadow-none"> Contact </span>
+              <span class="btn btn-default shadow-none">
+                <h4>Contact</h4>
+              </span>
             </a>
           </div>
         </div>
@@ -57,13 +65,15 @@
     <section id="about">
       <!-- intro/about me -->
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
             <h1 class="section-h1">About Me</h1>
           </div>
           <div class="col-12">
             <div class="container-fluid">
-              <div class="row jumbotron-style">
+              <div
+                class="row jumbotron-style flex align-items-center justify-content-center"
+              >
                 <!-- lots of flexbox attributes added-->
                 <div
                   class="col-xs-12 col-md-4 flex align-items-center justify-content-center flex-column text-center"
@@ -113,8 +123,8 @@
       <!-- experiences section -->
       <!-- hardware -->
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
             <h1 class="section-h1">Experiences</h1>
           </div>
         </div>
@@ -170,7 +180,7 @@
           </div>
         </div>
         <div class="jumbotron-style flex-column">
-          <div class="row flex">
+          <div class="row flex col-md-6">
             <div class="col-12">
               <h2>
                 Mathematical Wizard,<br />
@@ -178,7 +188,7 @@
               </h2>
             </div>
           </div>
-          <div class="row flex align-items-center">
+          <div class="row flex align-items-center justify-content-center">
             <div class="col-12">
               <p>
                 During part of my time at Mount Hood Community College, I was a
@@ -309,15 +319,15 @@
     <section id="projects">
       <div class="container-fluid">
         <div class="row my-custom-flex">
-          <div class="col-12">
+          <div class="col-md-6">
             <h1 class="section-h1">Projects</h1>
           </div>
         </div>
-        <div class="jumbotron-style flex-column">
+        <div class="jumbotron-style flex-column align-items-center">
           <div class="col-12">
             <h2>In the beginning...</h2>
           </div>
-          <div class="col-12">
+          <div class="col-10">
             <p>
               The first graphical game I made was pong. Unfortunately, this was
               before I knew how to use GitHub for project hosting, and I seem to
@@ -374,7 +384,7 @@
             <div class="col-12">
               <h2>The Traveling Salesman</h2>
             </div>
-            <div class="col-12 my-custom-flex">
+            <div class="col-10 my-custom-flex">
               <p>
                 This is a term project for my rust class which uses bevy as the
                 game engine. It is a game about learning the recipes to combine
@@ -450,7 +460,7 @@
             <div class="col-12">
               <h2>3D Multiplayer Chess</h2>
             </div>
-            <div class="col-12">
+            <div class="col-10">
               <p>
                 This is a project that I did about a year ago. It uses Unity as
                 the game engine with C#, and uses PUN (Photon Engine) to
@@ -507,7 +517,7 @@
                 class="img-fluid"
               />
             </div>
-            <div class="col-12">
+            <div class="col-10">
               <p>
                 Below is a screenshot of Blender software showing a render of
                 the chess pieces. As you can see, there are many stages involved
